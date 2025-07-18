@@ -50,50 +50,50 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-blue-50 p-6 rounded-lg shadow-md border-l-4 border-blue-500">
               <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold mb-2">上下文工程</h3>
-              <p className="text-gray-600">
+              <h3 className="text-lg font-semibold mb-2 text-blue-900">上下文工程</h3>
+              <p className="text-blue-700">
                 系统化的上下文管理，确保AI理解项目全貌和具体需求
               </p>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-purple-50 p-6 rounded-lg shadow-md border-l-4 border-purple-500">
               <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold mb-2">垂直切片</h3>
-              <p className="text-gray-600">
+              <h3 className="text-lg font-semibold mb-2 text-purple-900">垂直切片</h3>
+              <p className="text-purple-700">
                 功能完整的端到端切片，确保每个迭代都能交付价值
               </p>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-green-50 p-6 rounded-lg shadow-md border-l-4 border-green-500">
               <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold mb-2">任务分级</h3>
-              <p className="text-gray-600">
+              <h3 className="text-lg font-semibold mb-2 text-green-900">任务分级</h3>
+              <p className="text-green-700">
                 Level 1-4 任务复杂度分级，匹配最优协作模式
               </p>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-orange-50 p-6 rounded-lg shadow-md border-l-4 border-orange-500">
               <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold mb-2">架构治理</h3>
-              <p className="text-gray-600">
+              <h3 className="text-lg font-semibold mb-2 text-orange-900">架构治理</h3>
+              <p className="text-orange-700">
                 适应性架构治理，确保系统长期健康和可维护性
               </p>
             </div>
@@ -109,7 +109,7 @@ export default function Home() {
       </section>
 
       {/* 人机协作能力对比 */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <HumanAiRadarChart />
         </div>
@@ -128,46 +128,46 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+            <div className="bg-red-50 p-8 rounded-lg border-l-4 border-red-500">
+              <h3 className="text-2xl font-bold text-red-900 mb-6">
                 为什么需要 PACE 1.0？
               </h3>
-              <ul className="space-y-4 text-gray-600">
+              <ul className="space-y-4 text-red-700">
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-red-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                   <span><strong>状态管理不对称：</strong>AI的无状态特性与项目持久化状态的矛盾</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-red-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                   <span><strong>推理范式冲突：</strong>生成式推理与逻辑推理的根本差异</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-red-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                   <span><strong>注意力局限性：</strong>局部注意力与分布式知识的矛盾</span>
                 </li>
               </ul>
             </div>
             
-            <div className="bg-gray-50 p-8 rounded-lg">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
+            <div className="bg-green-50 p-8 rounded-lg border-l-4 border-green-500">
+              <h3 className="text-xl font-bold text-green-900 mb-4">
                 PACE 1.0 解决方案
               </h3>
               <div className="space-y-4">
                 <div className="flex items-center">
-                  <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">1</div>
-                  <span className="font-semibold">蓝图规划</span>
+                  <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">1</div>
+                  <span className="font-semibold text-green-800">蓝图规划</span>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">2</div>
-                  <span className="font-semibold">任务卡设计</span>
+                  <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">2</div>
+                  <span className="font-semibold text-green-800">任务卡设计</span>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">3</div>
-                  <span className="font-semibold">AI协作开发</span>
+                  <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">3</div>
+                  <span className="font-semibold text-green-800">AI协作开发</span>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">4</div>
-                  <span className="font-semibold">质量保障</span>
+                  <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">4</div>
+                  <span className="font-semibold text-green-800">质量保障</span>
                 </div>
               </div>
             </div>

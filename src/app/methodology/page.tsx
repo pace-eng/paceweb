@@ -31,21 +31,21 @@ export default function MethodologyPage() {
             PACE 1.0的核心洞察是：<strong>成功的AI协作不在于让AI完全替代人类，而在于找到最优的人机分工模式</strong>，让每一方都能发挥自己的独特优势。
           </p>
 
-          <div className="bg-blue-50 p-6 rounded-lg my-8">
+          <div className="bg-blue-50 p-6 rounded-lg my-8 border border-blue-200">
             <h3 className="text-lg font-semibold text-blue-900 mb-3">人机协作的核心原则</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <h4 className="font-semibold text-blue-800">人类擅长：</h4>
-                <ul className="text-sm text-blue-700 mt-2 space-y-1">
+              <div className="bg-green-50 p-4 rounded-lg border border-green-200">
+                <h4 className="font-semibold text-green-800">人类擅长：</h4>
+                <ul className="text-sm text-green-700 mt-2 space-y-1">
                   <li>• 创造性思维</li>
                   <li>• 复杂决策</li>
                   <li>• 价值判断</li>
                   <li>• 架构设计</li>
                 </ul>
               </div>
-              <div>
-                <h4 className="font-semibold text-blue-800">AI擅长：</h4>
-                <ul className="text-sm text-blue-700 mt-2 space-y-1">
+              <div className="bg-purple-50 p-4 rounded-lg border border-purple-200">
+                <h4 className="font-semibold text-purple-800">AI擅长：</h4>
+                <ul className="text-sm text-purple-700 mt-2 space-y-1">
                   <li>• 模式识别</li>
                   <li>• 代码生成</li>
                   <li>• 重复性工作</li>
@@ -88,32 +88,47 @@ export default function MethodologyPage() {
           </p>
 
           <h3>上下文工程的核心要素</h3>
-          <ul>
-            <li><strong>信息的结构化组织</strong>：将复杂的业务需求转化为AI可理解的结构化描述</li>
-            <li><strong>认知负荷的管理</strong>：在有限的上下文窗口内传递最关键的信息</li>
-            <li><strong>意图的精确传达</strong>：确保AI理解人类的真实意图而非表面需求</li>
-          </ul>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+            <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+              <h4 className="font-semibold text-blue-900 mb-2">信息的结构化组织</h4>
+              <p className="text-sm text-blue-700">
+                将复杂的业务需求转化为AI可理解的结构化描述
+              </p>
+            </div>
+            <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-500">
+              <h4 className="font-semibold text-purple-900 mb-2">认知负荷的管理</h4>
+              <p className="text-sm text-purple-700">
+                在有限的上下文窗口内传递最关键的信息
+              </p>
+            </div>
+            <div className="bg-orange-50 p-6 rounded-lg border-l-4 border-orange-500">
+              <h4 className="font-semibold text-orange-900 mb-2">意图的精确传达</h4>
+              <p className="text-sm text-orange-700">
+                确保AI理解人类的真实意图而非表面需求
+              </p>
+            </div>
+          </div>
 
           <h2>垂直切片策略</h2>
           <p>
             垂直切片是PACE 1.0的核心工作模式，它强调功能完整性、端到端覆盖、价值导向和风险分散。
           </p>
 
-          <div className="bg-gray-50 p-6 rounded-lg my-8">
-            <h3 className="text-lg font-semibold mb-4">垂直切片 vs MVP</h3>
+          <div className="bg-yellow-50 p-6 rounded-lg my-8 border border-yellow-200">
+            <h3 className="text-lg font-semibold text-yellow-900 mb-4">垂直切片 vs MVP</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h4 className="font-semibold text-gray-800">MVP（最小可行产品）</h4>
-                <ul className="text-sm text-gray-600 mt-2 space-y-1">
+              <div className="bg-orange-50 p-4 rounded-lg border border-orange-200">
+                <h4 className="font-semibold text-orange-800">MVP（最小可行产品）</h4>
+                <ul className="text-sm text-orange-700 mt-2 space-y-1">
                   <li>• 关注产品层面的市场验证</li>
                   <li>• 目标是验证商业假设</li>
                   <li>• 允许&ldquo;脏快&rdquo;的实现方式</li>
                   <li>• 验证完毕后可能被重写</li>
                 </ul>
               </div>
-              <div>
-                <h4 className="font-semibold text-gray-800">垂直切片</h4>
-                <ul className="text-sm text-gray-600 mt-2 space-y-1">
+              <div className="bg-green-50 p-4 rounded-lg border border-green-200">
+                <h4 className="font-semibold text-green-800">垂直切片</h4>
+                <ul className="text-sm text-green-700 mt-2 space-y-1">
                   <li>• 关注工程层面的技术实现</li>
                   <li>• 目标是降低技术风险</li>
                   <li>• 要求符合生产标准</li>
@@ -129,31 +144,31 @@ export default function MethodologyPage() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-            <div className="border border-green-200 p-6 rounded-lg">
-              <h4 className="font-semibold text-green-800 mb-2">Level 1 - 标准化实现</h4>
-              <p className="text-sm text-green-700 mb-2">AI参与度：85-95%</p>
-              <p className="text-sm text-green-600">
+            <div className="bg-green-50 border-l-4 border-green-500 p-6 rounded-lg">
+              <h4 className="font-semibold text-green-900 mb-2">Level 1 - 标准化实现</h4>
+              <p className="text-sm text-green-800 mb-2">AI参与度：85-95%</p>
+              <p className="text-sm text-green-700">
                 明确的输入输出，标准化的实现模式。如CRUD操作、数据转换等。
               </p>
             </div>
-            <div className="border border-blue-200 p-6 rounded-lg">
-              <h4 className="font-semibold text-blue-800 mb-2">Level 2 - 集成协调</h4>
-              <p className="text-sm text-blue-700 mb-2">AI参与度：60-80%</p>
-              <p className="text-sm text-blue-600">
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-lg">
+              <h4 className="font-semibold text-blue-900 mb-2">Level 2 - 集成协调</h4>
+              <p className="text-sm text-blue-800 mb-2">AI参与度：60-80%</p>
+              <p className="text-sm text-blue-700">
                 多模块交互，需要考虑系统一致性。如API集成、状态管理等。
               </p>
             </div>
-            <div className="border border-orange-200 p-6 rounded-lg">
-              <h4 className="font-semibold text-orange-800 mb-2">Level 3 - 架构设计</h4>
-              <p className="text-sm text-orange-700 mb-2">AI参与度：30-50%</p>
-              <p className="text-sm text-orange-600">
+            <div className="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-lg">
+              <h4 className="font-semibold text-orange-900 mb-2">Level 3 - 架构设计</h4>
+              <p className="text-sm text-orange-800 mb-2">AI参与度：30-50%</p>
+              <p className="text-sm text-orange-700">
                 需要权衡多个因素，涉及技术选型。如系统架构、性能优化等。
               </p>
             </div>
-            <div className="border border-purple-200 p-6 rounded-lg">
-              <h4 className="font-semibold text-purple-800 mb-2">Level 4 - 创新探索</h4>
-              <p className="text-sm text-purple-700 mb-2">AI参与度：10-30%</p>
-              <p className="text-sm text-purple-600">
+            <div className="bg-purple-50 border-l-4 border-purple-500 p-6 rounded-lg">
+              <h4 className="font-semibold text-purple-900 mb-2">Level 4 - 创新探索</h4>
+              <p className="text-sm text-purple-800 mb-2">AI参与度：10-30%</p>
+              <p className="text-sm text-purple-700">
                 高度不确定性，需要创造性思维。如新技术验证、算法创新等。
               </p>
             </div>

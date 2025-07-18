@@ -21,7 +21,7 @@ export default function AboutPage() {
             旨在建立一套系统化、可持续的人机协作开发体系。
           </p>
 
-          <div className="bg-blue-50 p-6 rounded-lg my-8">
+          <div className="bg-blue-50 p-6 rounded-lg my-8 border-l-4 border-blue-500">
             <h3 className="text-lg font-semibold text-blue-900 mb-4">核心愿景</h3>
             <p className="text-blue-800">
               让每一个软件开发团队都能够高效、安全、可持续地与AI协作，
@@ -32,30 +32,30 @@ export default function AboutPage() {
 
           <h2>方法论特色</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-3">科学严谨</h3>
-              <p className="text-gray-600">
+            <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
+              <h3 className="text-lg font-semibold text-green-900 mb-3">科学严谨</h3>
+              <p className="text-green-700">
                 基于对AI本质局限性的深度分析，从第一性原理出发，
                 构建了完整的理论基础和实践框架。
               </p>
             </div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-3">实践导向</h3>
-              <p className="text-gray-600">
+            <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+              <h3 className="text-lg font-semibold text-blue-900 mb-3">实践导向</h3>
+              <p className="text-blue-700">
                 所有理论都经过真实项目的验证，提供具体可操作的工具、
                 模板和最佳实践。
               </p>
             </div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-3">持续进化</h3>
-              <p className="text-gray-600">
+            <div className="bg-orange-50 p-6 rounded-lg border-l-4 border-orange-500">
+              <h3 className="text-lg font-semibold text-orange-900 mb-3">持续进化</h3>
+              <p className="text-orange-700">
                 建立了完善的反馈机制和改进体系，随着AI技术的发展
                 持续优化和完善方法论。
               </p>
             </div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-3">开放共享</h3>
-              <p className="text-gray-600">
+            <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-500">
+              <h3 className="text-lg font-semibold text-purple-900 mb-3">开放共享</h3>
+              <p className="text-purple-700">
                 秉承开放的理念，鼓励社区参与，共同推动方法论的
                 发展和推广应用。
               </p>
@@ -64,21 +64,21 @@ export default function AboutPage() {
 
           <h2>发展历程</h2>
           <div className="space-y-6 my-8">
-            <div className="border-l-4 border-blue-500 pl-6">
+            <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
               <h3 className="text-lg font-semibold text-blue-800">2024年 - 理论奠基</h3>
               <p className="text-blue-700 text-sm mt-1">
                 深入研究AI的本质局限性，提出上下文工程的核心概念，
                 建立了PACE方法论的理论基础。
               </p>
             </div>
-            <div className="border-l-4 border-green-500 pl-6">
+            <div className="bg-green-50 p-4 rounded-lg border border-green-200">
               <h3 className="text-lg font-semibold text-green-800">2024年下半年 - 实践验证</h3>
               <p className="text-green-700 text-sm mt-1">
                 在多个真实项目中应用和验证方法论，不断优化工作流程
                 和工具链，积累了丰富的实践经验。
               </p>
             </div>
-            <div className="border-l-4 border-purple-500 pl-6">
+            <div className="bg-purple-50 p-4 rounded-lg border border-purple-200">
               <h3 className="text-lg font-semibold text-purple-800">2025年 - 正式发布</h3>
               <p className="text-purple-700 text-sm mt-1">
                 发布PACE 1.0正式版本，建立官方网站和社区，
@@ -93,24 +93,24 @@ export default function AboutPage() {
             人工智能、用户体验设计等多个领域，具有丰富的理论研究和实践经验。
           </p>
 
-          <div className="bg-gray-50 p-6 rounded-lg my-8">
+          <div className="bg-gray-50 p-6 rounded-lg my-8 border-l-4 border-gray-500">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">团队构成</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <h4 className="font-semibold text-gray-800">软件工程专家</h4>
-                <p className="text-sm text-gray-600 mt-1">
+              <div className="text-center bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                <h4 className="font-semibold text-blue-900">软件工程专家</h4>
+                <p className="text-sm text-blue-700 mt-1">
                   负责方法论的工程实践设计和验证
                 </p>
               </div>
-              <div className="text-center">
-                <h4 className="font-semibold text-gray-800">AI技术专家</h4>
-                <p className="text-sm text-gray-600 mt-1">
+              <div className="text-center bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                <h4 className="font-semibold text-green-900">AI技术专家</h4>
+                <p className="text-sm text-green-700 mt-1">
                   研究AI技术特性和协作模式优化
                 </p>
               </div>
-              <div className="text-center">
-                <h4 className="font-semibold text-gray-800">产品设计专家</h4>
-                <p className="text-sm text-gray-600 mt-1">
+              <div className="text-center bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+                <h4 className="font-semibold text-purple-900">产品设计专家</h4>
+                <p className="text-sm text-purple-700 mt-1">
                   关注用户体验和工具易用性设计
                 </p>
               </div>
@@ -132,21 +132,21 @@ export default function AboutPage() {
             <li><strong>社区建设</strong>：参与 <a href="https://github.com/pace-eng/pace/discussions" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">GitHub 讨论</a> 和线下聚会</li>
           </ul>
 
-          <div className="bg-yellow-50 p-6 rounded-lg my-8">
+          <div className="bg-yellow-50 p-6 rounded-lg my-8 border-l-4 border-yellow-500">
             <h3 className="text-lg font-semibold text-yellow-900 mb-4">开源项目信息</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <h4 className="font-semibold text-yellow-800">项目详情</h4>
-                <ul className="text-sm text-yellow-700 mt-2 space-y-1">
+              <div className="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-500">
+                <h4 className="font-semibold text-orange-900">项目详情</h4>
+                <ul className="text-sm text-orange-700 mt-2 space-y-1">
                   <li>• 开源许可证：MIT License</li>
                   <li>• 代码托管：GitHub</li>
                   <li>• 主要语言：TypeScript, Markdown</li>
                   <li>• 官方网站：pace.150404.xyz</li>
                 </ul>
               </div>
-              <div>
-                <h4 className="font-semibold text-yellow-800">快速链接</h4>
-                <ul className="text-sm text-yellow-700 mt-2 space-y-1">
+              <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                <h4 className="font-semibold text-blue-900">快速链接</h4>
+                <ul className="text-sm text-blue-700 mt-2 space-y-1">
                   <li>• <a href="https://github.com/pace-eng/pace" target="_blank" rel="noopener noreferrer" className="hover:underline">主仓库</a></li>
                   <li>• <a href="https://github.com/pace-eng/pace/discussions" target="_blank" rel="noopener noreferrer" className="hover:underline">社区讨论</a></li>
                   <li>• <a href="https://github.com/pace-eng/pace/issues" target="_blank" rel="noopener noreferrer" className="hover:underline">问题反馈</a></li>
@@ -163,8 +163,8 @@ export default function AboutPage() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-            <div className="bg-blue-50 p-4 rounded-lg">
-              <h4 className="font-semibold text-blue-800 mb-2">技术增强</h4>
+            <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+              <h4 className="font-semibold text-blue-900 mb-2">技术增强</h4>
               <ul className="text-sm text-blue-700 space-y-1">
                 <li>• 更智能的任务卡生成</li>
                 <li>• 自动化的代码质量评估</li>
@@ -172,8 +172,8 @@ export default function AboutPage() {
                 <li>• 个性化的开发助手</li>
               </ul>
             </div>
-            <div className="bg-green-50 p-4 rounded-lg">
-              <h4 className="font-semibold text-green-800 mb-2">生态拓展</h4>
+            <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+              <h4 className="font-semibold text-green-900 mb-2">生态拓展</h4>
               <ul className="text-sm text-green-700 space-y-1">
                 <li>• 多语言和框架支持</li>
                 <li>• 企业级工具平台</li>

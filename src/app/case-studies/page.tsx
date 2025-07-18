@@ -16,7 +16,7 @@ export default function CaseStudiesPage() {
         <div className="prose prose-lg max-w-none">
           <h2>案例一：电商平台用户认证系统重构</h2>
           
-          <div className="bg-blue-50 p-6 rounded-lg my-8">
+          <div className="bg-blue-50 p-6 rounded-lg my-8 border-l-4 border-blue-500">
             <h3 className="text-lg font-semibold text-blue-900 mb-4">项目背景</h3>
             <p className="text-blue-800">
               某大型电商平台需要重构老旧的用户认证系统，支持多种登录方式（邮箱、手机、第三方登录），
@@ -26,7 +26,7 @@ export default function CaseStudiesPage() {
 
           <h3>实施过程</h3>
           <div className="space-y-6 my-8">
-            <div className="border-l-4 border-green-500 pl-6">
+            <div className="bg-green-50 p-4 rounded-lg border border-green-200">
               <h4 className="font-semibold text-green-800">阶段0：蓝图规划（1周）</h4>
               <ul className="text-sm text-green-700 mt-2 space-y-1">
                 <li>• 分析现有系统痛点和用户需求</li>
@@ -36,21 +36,21 @@ export default function CaseStudiesPage() {
               </ul>
             </div>
             
-            <div className="border-l-4 border-blue-500 pl-6">
+            <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
               <h4 className="font-semibold text-blue-800">阶段1：切片实施（6周）</h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
-                <div>
-                  <h5 className="font-semibold text-sm">前4个切片（基础功能）</h5>
-                  <ul className="text-xs text-blue-600 mt-1 space-y-1">
+                <div className="bg-purple-50 p-3 rounded-lg border border-purple-200">
+                  <h5 className="font-semibold text-purple-800 text-sm">前4个切片（基础功能）</h5>
+                  <ul className="text-xs text-purple-700 mt-1 space-y-1">
                     <li>• 邮箱密码登录</li>
                     <li>• 手机验证码登录</li>
                     <li>• 用户注册流程</li>
                     <li>• 密码重置功能</li>
                   </ul>
                 </div>
-                <div>
-                  <h5 className="font-semibold text-sm">后4个切片（高级功能）</h5>
-                  <ul className="text-xs text-blue-600 mt-1 space-y-1">
+                <div className="bg-orange-50 p-3 rounded-lg border border-orange-200">
+                  <h5 className="font-semibold text-orange-800 text-sm">后4个切片（高级功能）</h5>
+                  <ul className="text-xs text-orange-700 mt-1 space-y-1">
                     <li>• 第三方登录（微信、支付宝）</li>
                     <li>• 两步验证</li>
                     <li>• 设备管理</li>
@@ -91,7 +91,7 @@ export default function CaseStudiesPage() {
             <li><strong>严格的质量保障</strong>：建立了三层质量检查机制</li>
           </ul>
 
-          <div className="bg-yellow-50 p-6 rounded-lg my-8">
+          <div className="bg-yellow-50 p-6 rounded-lg my-8 border-l-4 border-yellow-500">
             <h3 className="text-lg font-semibold text-yellow-900 mb-3">经验总结</h3>
             <p className="text-yellow-800 mb-3">
               &ldquo;PACE 1.0让我们在保证质量的前提下，显著提升了开发效率。最重要的是，团队对AI协作的信心大大增强。&rdquo;
@@ -105,7 +105,7 @@ export default function CaseStudiesPage() {
 
           <h2>案例二：移动应用快速原型开发</h2>
           
-          <div className="bg-purple-50 p-6 rounded-lg my-8">
+          <div className="bg-purple-50 p-6 rounded-lg my-8 border-l-4 border-purple-500">
             <h3 className="text-lg font-semibold text-purple-900 mb-4">项目背景</h3>
             <p className="text-purple-800">
               某创业公司需要在3个月内开发一款社交类移动应用的MVP版本，用于验证商业模式和获取种子用户。
@@ -115,7 +115,7 @@ export default function CaseStudiesPage() {
 
           <h3>实施策略</h3>
           <div className="space-y-6 my-8">
-            <div className="border-l-4 border-purple-500 pl-6">
+            <div className="bg-purple-50 p-4 rounded-lg border border-purple-200">
               <h4 className="font-semibold text-purple-800">快速蓝图（3天）</h4>
               <ul className="text-sm text-purple-700 mt-2 space-y-1">
                 <li>• 用户访谈和需求分析</li>
@@ -125,7 +125,7 @@ export default function CaseStudiesPage() {
               </ul>
             </div>
             
-            <div className="border-l-4 border-orange-500 pl-6">
+            <div className="bg-orange-50 p-4 rounded-lg border border-orange-200">
               <h4 className="font-semibold text-orange-800">敏捷切片（2-3天/切片）</h4>
               <div className="text-sm text-orange-700 mt-2">
                 <p>采用极短的切片周期，每个切片专注于一个核心用户场景：</p>
@@ -192,7 +192,7 @@ export default function CaseStudiesPage() {
             <li><strong>投资吸引</strong>：基于MVP成功获得天使轮融资</li>
           </ul>
 
-          <div className="bg-green-50 p-6 rounded-lg my-8">
+          <div className="bg-green-50 p-6 rounded-lg my-8 border-l-4 border-green-500">
             <h3 className="text-lg font-semibold text-green-900 mb-3">创始人感言</h3>
             <p className="text-green-800 mb-3">
               &ldquo;PACE 1.0让我们这样的小团队也能快速构建高质量的产品。AI协作不仅提升了效率，更重要的是让我们能专注于产品创新和用户体验。&rdquo;
@@ -206,7 +206,7 @@ export default function CaseStudiesPage() {
 
           <h2>案例三：企业内部管理系统现代化</h2>
           
-          <div className="bg-orange-50 p-6 rounded-lg my-8">
+          <div className="bg-orange-50 p-6 rounded-lg my-8 border-l-4 border-orange-500">
             <h3 className="text-lg font-semibold text-orange-900 mb-4">项目背景</h3>
             <p className="text-orange-800">
               某制造业企业需要将10年前开发的内部管理系统进行现代化改造，包括技术栈升级、
@@ -216,19 +216,19 @@ export default function CaseStudiesPage() {
 
           <h3>挑战与解决方案</h3>
           <div className="space-y-6 my-8">
-            <div className="bg-red-50 p-4 rounded-lg">
+            <div className="bg-red-50 p-4 rounded-lg border border-red-200">
               <h4 className="font-semibold text-red-800 mb-2">挑战：遗留系统复杂度高</h4>
               <p className="text-sm text-red-700 mb-2">系统包含20多个模块，业务逻辑复杂，文档不完整</p>
               <p className="text-sm text-red-600"><strong>解决方案：</strong>采用渐进式迁移策略，每个切片专注于1-2个模块的现代化</p>
             </div>
             
-            <div className="bg-yellow-50 p-4 rounded-lg">
+            <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
               <h4 className="font-semibold text-yellow-800 mb-2">挑战：业务不能中断</h4>
               <p className="text-sm text-yellow-700 mb-2">系统24/7运行，不能停机进行大规模改造</p>
               <p className="text-sm text-yellow-600"><strong>解决方案：</strong>采用双轨并行策略，新旧系统逐步切换</p>
             </div>
             
-            <div className="bg-green-50 p-4 rounded-lg">
+            <div className="bg-green-50 p-4 rounded-lg border border-green-200">
               <h4 className="font-semibold text-green-800 mb-2">挑战：团队技能转型</h4>
               <p className="text-sm text-green-700 mb-2">团队主要使用传统技术，需要学习现代前端框架</p>
               <p className="text-sm text-green-600"><strong>解决方案：</strong>AI协作降低学习门槛，边做边学</p>
@@ -257,21 +257,21 @@ export default function CaseStudiesPage() {
 
           <h2>总体经验总结</h2>
           
-          <div className="bg-gray-50 p-6 rounded-lg my-8">
+          <div className="bg-gray-50 p-6 rounded-lg my-8 border-l-4 border-gray-500">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">共同成功要素</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h4 className="font-semibold text-gray-800 mb-2">技术层面</h4>
-                <ul className="text-sm text-gray-600 space-y-1">
+              <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                <h4 className="font-semibold text-blue-900 mb-2">技术层面</h4>
+                <ul className="text-sm text-blue-700 space-y-1">
                   <li>• 高质量的任务卡设计</li>
                   <li>• 合理的AI工具选择和配置</li>
                   <li>• 严格的代码质量检查</li>
                   <li>• 持续的架构治理</li>
                 </ul>
               </div>
-              <div>
-                <h4 className="font-semibold text-gray-800 mb-2">组织层面</h4>
-                <ul className="text-sm text-gray-600 space-y-1">
+              <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                <h4 className="font-semibold text-green-900 mb-2">组织层面</h4>
+                <ul className="text-sm text-green-700 space-y-1">
                   <li>• 领导层的支持和推动</li>
                   <li>• 充分的团队培训</li>
                   <li>• 渐进式的文化变革</li>

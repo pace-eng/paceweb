@@ -20,7 +20,7 @@ export default function ContactPage() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
-            <div className="bg-blue-50 p-6 rounded-lg">
+            <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
               <h3 className="text-lg font-semibold text-blue-900 mb-3">GitHub</h3>
               <p className="text-blue-700 mb-4">
                 查看源代码、提交问题和参与开发
@@ -33,7 +33,7 @@ export default function ContactPage() {
               </a>
             </div>
 
-            <div className="bg-green-50 p-6 rounded-lg">
+            <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
               <h3 className="text-lg font-semibold text-green-900 mb-3">讨论社区</h3>
               <p className="text-green-700 mb-4">
                 分享经验、讨论最佳实践和获取帮助
@@ -49,21 +49,21 @@ export default function ContactPage() {
 
           <h2>贡献方式</h2>
           <div className="space-y-4">
-            <div className="border-l-4 border-blue-500 pl-6">
-              <h4 className="font-semibold text-blue-800">分享实践经验</h4>
-              <p className="text-gray-600">
+            <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+              <h4 className="font-semibold text-blue-900">分享实践经验</h4>
+              <p className="text-blue-700">
                 将你在PACE 1.0实施过程中的经验和案例分享给社区
               </p>
             </div>
-            <div className="border-l-4 border-green-500 pl-6">
-              <h4 className="font-semibold text-green-800">完善文档</h4>
-              <p className="text-gray-600">
+            <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
+              <h4 className="font-semibold text-green-900">完善文档</h4>
+              <p className="text-green-700">
                 帮助改进和完善PACE 1.0的文档和指南
               </p>
             </div>
-            <div className="border-l-4 border-purple-500 pl-6">
-              <h4 className="font-semibold text-purple-800">开发工具</h4>
-              <p className="text-gray-600">
+            <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-500">
+              <h4 className="font-semibold text-purple-900">开发工具</h4>
+              <p className="text-purple-700">
                 开发支持PACE 1.0工作流的工具和插件
               </p>
             </div>
@@ -79,7 +79,7 @@ export default function ContactPage() {
             <li>GitHub Discussions：参与社区讨论</li>
           </ul>
 
-          <div className="bg-yellow-50 p-6 rounded-lg my-8">
+          <div className="bg-yellow-50 p-6 rounded-lg my-8 border-l-4 border-yellow-500">
             <h3 className="text-lg font-semibold text-yellow-900 mb-3">企业合作</h3>
             <p className="text-yellow-800">
               如果你的团队希望获得PACE 1.0的专业培训、咨询服务或定制化解决方案，

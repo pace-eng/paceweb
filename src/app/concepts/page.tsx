@@ -40,7 +40,7 @@ export default function ConceptsPage() {
             <li><strong>风险分散</strong>：通过小粒度迭代降低项目风险</li>
           </ul>
 
-          <div className="bg-green-50 p-6 rounded-lg my-8">
+          <div className="bg-green-50 p-6 rounded-lg my-8 border-l-4 border-green-500">
             <h3 className="text-lg font-semibold text-green-900 mb-3">切片演进示例</h3>
             <p className="text-green-700 mb-4">
               我们不试图一次性造出一辆完美的汽车，而是通过构建一系列功能上持续完善、但始终可用的产品来逐步实现目标：
@@ -72,21 +72,21 @@ export default function ConceptsPage() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h4 className="font-semibold text-gray-800 mb-2">活的架构文档</h4>
-              <p className="text-sm text-gray-600">与代码同步演进的架构描述</p>
+            <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+              <h4 className="font-semibold text-blue-900 mb-2">活的架构文档</h4>
+              <p className="text-sm text-blue-700">与代码同步演进的架构描述</p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h4 className="font-semibold text-gray-800 mb-2">渐进式一致性</h4>
-              <p className="text-sm text-gray-600">在演进中保持架构的整体一致性</p>
+            <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
+              <h4 className="font-semibold text-green-900 mb-2">渐进式一致性</h4>
+              <p className="text-sm text-green-700">在演进中保持架构的整体一致性</p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h4 className="font-semibold text-gray-800 mb-2">智能化检查</h4>
-              <p className="text-sm text-gray-600">通过自动化工具检测架构偏离</p>
+            <div className="bg-orange-50 p-6 rounded-lg border-l-4 border-orange-500">
+              <h4 className="font-semibold text-orange-900 mb-2">智能化检查</h4>
+              <p className="text-sm text-orange-700">通过自动化工具检测架构偏离</p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h4 className="font-semibold text-gray-800 mb-2">社区化治理</h4>
-              <p className="text-sm text-gray-600">通过团队协作维护架构健康</p>
+            <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-500">
+              <h4 className="font-semibold text-purple-900 mb-2">社区化治理</h4>
+              <p className="text-sm text-purple-700">通过团队协作维护架构健康</p>
             </div>
           </div>
 
@@ -102,21 +102,21 @@ export default function ConceptsPage() {
             <li><strong>为&ldquo;序列化输出&rdquo;设计</strong>：提供清晰的思维脚手架</li>
           </ul>
 
-          <div className="bg-yellow-50 p-6 rounded-lg my-8">
+          <div className="bg-yellow-50 p-6 rounded-lg my-8 border border-yellow-200">
             <h3 className="text-lg font-semibold text-yellow-900 mb-3">任务卡标准结构</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <h4 className="font-semibold text-yellow-800">基础信息</h4>
-                <ul className="text-sm text-yellow-700 mt-2 space-y-1">
+              <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                <h4 className="font-semibold text-blue-900">基础信息</h4>
+                <ul className="text-sm text-blue-700 mt-2 space-y-1">
                   <li>• 任务标识与分类</li>
                   <li>• 业务上下文</li>
                   <li>• 技术规格</li>
                   <li>• 实现指导</li>
                 </ul>
               </div>
-              <div>
-                <h4 className="font-semibold text-yellow-800">质量保障</h4>
-                <ul className="text-sm text-yellow-700 mt-2 space-y-1">
+              <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                <h4 className="font-semibold text-green-900">质量保障</h4>
+                <ul className="text-sm text-green-700 mt-2 space-y-1">
                   <li>• 测试策略</li>
                   <li>• 验证清单</li>
                   <li>• 风险评估</li>
@@ -131,13 +131,13 @@ export default function ConceptsPage() {
             理解了核心概念后，建议继续学习：
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-            <Link href="/implementation" className="block p-4 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors">
-              <h4 className="font-semibold text-blue-800">实施指南</h4>
-              <p className="text-sm text-blue-600 mt-1">了解如何在项目中实施PACE 1.0</p>
+            <Link href="/implementation" className="block p-4 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors border-l-4 border-blue-500">
+              <h4 className="font-semibold text-blue-900">实施指南</h4>
+              <p className="text-sm text-blue-700 mt-1">了解如何在项目中实施PACE 1.0</p>
             </Link>
-            <Link href="/best-practices" className="block p-4 bg-green-50 hover:bg-green-100 rounded-lg transition-colors">
-              <h4 className="font-semibold text-green-800">最佳实践</h4>
-              <p className="text-sm text-green-600 mt-1">学习经过验证的实践方法</p>
+            <Link href="/best-practices" className="block p-4 bg-green-50 hover:bg-green-100 rounded-lg transition-colors border-l-4 border-green-500">
+              <h4 className="font-semibold text-green-900">最佳实践</h4>
+              <p className="text-sm text-green-700 mt-1">学习经过验证的实践方法</p>
             </Link>
           </div>
         </div>

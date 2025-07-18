@@ -9,43 +9,6 @@ interface WorkflowSwimlaneProps {
 export default function WorkflowSwimlane({ className = '' }: WorkflowSwimlaneProps) {
   const [activePhase, setActivePhase] = useState<string | null>(null);
 
-  const phases = [
-    {
-      id: 'phase0',
-      name: '阶段 0: 蓝图规划',
-      color: '#3B82F6',
-      duration: '1-2周',
-      description: '从想法到可执行路线图',
-      steps: [
-        { id: 'input', name: '输入原始材料', actor: 'human', description: '想法、用户故事、访谈记录' },
-        { id: 'analysis', name: 'AI辅助分析', actor: 'ai', description: '提炼核心用户故事' },
-        { id: 'prototype', name: '生成HTML原型', actor: 'ai', description: '可交互的原型界面' },
-        { id: 'validation', name: 'PRD验证优化', actor: 'human', description: '验证用户体验' },
-        { id: 'roadmap', name: '垂直切片路线图', actor: 'ai', description: '开发路线图' },
-        { id: 'approval', name: '评审批准', actor: 'human', description: '最终决策' }
-      ]
-    },
-    {
-      id: 'phase1',
-      name: '阶段 1: 切片循环',
-      color: '#10B981',
-      duration: '持续迭代',
-      description: '四步循环：定义→评审→实现→验证',
-      steps: [
-        { id: 'define', name: '定义', actor: 'human', description: '创建引用式任务卡' },
-        { id: 'review', name: '评审', actor: 'human', description: '团队批准任务卡' },
-        { id: 'implement', name: '实现', actor: 'ai', description: 'AI驱动编码' },
-        { id: 'verify', name: '验证', actor: 'human', description: '代码评审与集成' }
-      ]
-    }
-  ];
-
-  const actors = [
-    { id: 'human', name: '人类工程师', color: '#3B82F6' },
-    { id: 'ai', name: 'AI系统', color: '#8B5CF6' },
-    { id: 'collaboration', name: '协作区域', color: '#10B981' }
-  ];
-
   return (
     <div className={`w-full ${className}`}>
       <div className="text-center mb-8">

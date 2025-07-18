@@ -1,15 +1,23 @@
 'use client';
 
 import { useState } from 'react';
-import Layout from '@/components/Layout';
 import Link from 'next/link';
-import { HeroSection } from '@/components/ui/HeroSection';
+import Layout from '@/components/Layout';
 import { Card, CardHeader, CardContent } from '@/components/ui/Card';
+import { Button } from '@/components/ui/Button';
 import { ProgressIndicator } from '@/components/ui/ProgressIndicator';
-import { RocketIcon, SettingsIcon, ChartIcon, LightbulbIcon, CheckIcon, ArrowRightIcon } from '@/components/ui/Icons';
+import { HeroSection } from '@/components/ui/HeroSection';
+import { 
+  SettingsIcon, 
+  RocketIcon, 
+  ChartIcon, 
+  CheckIcon, 
+  ArrowRightIcon, 
+  LightbulbIcon 
+} from '@/components/ui/Icons';
 
 export default function ImplementationPage() {
-  const [expandedPhase, setExpandedPhase] = useState<string | null>('phase1');
+  const [expandedPhase, setExpandedPhase] = useState<string | null>(null);
 
   const phases = [
     {
@@ -303,12 +311,12 @@ export default function ImplementationPage() {
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
-                  <div className="p-4 bg-red-50 rounded-lg">
-                    <h4 className="font-semibold text-red-800 mb-2">AI代码质量不稳定</h4>
+                  <div className="p-4 bg-red-50 rounded-lg border-l-4 border-red-500">
+                    <h4 className="font-semibold text-red-900 mb-2">AI代码质量不稳定</h4>
                     <p className="text-sm text-red-700">建立多层质量检查机制，制定代码质量标准</p>
                   </div>
-                  <div className="p-4 bg-red-50 rounded-lg">
-                    <h4 className="font-semibold text-red-800 mb-2">技术债务积累</h4>
+                  <div className="p-4 bg-red-50 rounded-lg border-l-4 border-red-500">
+                    <h4 className="font-semibold text-red-900 mb-2">技术债务积累</h4>
                     <p className="text-sm text-red-700">建立债务识别机制，制定渐进式偿还计划</p>
                   </div>
                 </div>
@@ -324,12 +332,12 @@ export default function ImplementationPage() {
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
-                  <div className="p-4 bg-orange-50 rounded-lg">
-                    <h4 className="font-semibold text-orange-800 mb-2">团队抗拒变化</h4>
+                  <div className="p-4 bg-orange-50 rounded-lg border-l-4 border-orange-500">
+                    <h4 className="font-semibold text-orange-900 mb-2">团队抗拒变化</h4>
                     <p className="text-sm text-orange-700">充分沟通培训，渐进式推进，展示成功案例</p>
                   </div>
-                  <div className="p-4 bg-orange-50 rounded-lg">
-                    <h4 className="font-semibold text-orange-800 mb-2">技能差距</h4>
+                  <div className="p-4 bg-orange-50 rounded-lg border-l-4 border-orange-500">
+                    <h4 className="font-semibold text-orange-900 mb-2">技能差距</h4>
                     <p className="text-sm text-orange-700">制定分层培训计划，建立导师制度</p>
                   </div>
                 </div>

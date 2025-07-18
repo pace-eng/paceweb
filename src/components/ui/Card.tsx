@@ -121,13 +121,7 @@ interface PhaseCardProps {
   onToggle?: () => void;
 }
 
-export function PhaseCard({ phase, isExpanded = false, onToggle }: PhaseCardProps) {
-  const colorClasses = {
-    green: 'bg-green-50 border-green-200 text-green-800',
-    blue: 'bg-blue-50 border-blue-200 text-blue-800',
-    purple: 'bg-purple-50 border-purple-200 text-purple-800',
-    orange: 'bg-orange-50 border-orange-200 text-orange-800',
-  };
+export function PhaseCard({ phase, isExpanded = false }: PhaseCardProps) {
 
   const iconColorClasses = {
     green: 'bg-green-500',
