@@ -1,0 +1,24 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1D4ED8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景圆形 -->
+  <circle cx="32" cy="32" r="30" fill="url(#gradient)" stroke="#1E40AF" stroke-width="2"/>
+  
+  <!-- P字母 -->
+  <path d="M18 16 L18 48 L22 48 L22 34 L30 34 Q36 34 36 26 Q36 18 30 18 L18 18 Z M22 22 L30 22 Q32 22 32 26 Q32 30 30 30 L22 30 Z" fill="white"/>
+  
+  <!-- AI协作象征 - 齿轮和连接线 -->
+  <circle cx="44" cy="20" r="4" fill="white" opacity="0.9"/>
+  <circle cx="44" cy="44" r="4" fill="white" opacity="0.9"/>
+  <line x1="40" y1="22" x2="40" y2="42" stroke="white" stroke-width="2" opacity="0.7"/>
+  <line x1="48" y1="22" x2="48" y2="42" stroke="white" stroke-width="2" opacity="0.7"/>
+  
+  <!-- 小齿轮装饰 -->
+  <polygon points="44,16 46,18 44,20 42,18" fill="white" opacity="0.8"/>
+  <polygon points="44,40 46,42 44,44 42,42" fill="white" opacity="0.8"/>
+</svg>
