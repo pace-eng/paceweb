@@ -1,5 +1,7 @@
 import Layout from '@/components/Layout';
 import Link from 'next/link';
+import PaceConceptDiagram from '@/components/svg/PaceConceptDiagram';
+import HumanAiRadarChart from '@/components/svg/HumanAiRadarChart';
 
 export default function Home() {
   return (
@@ -99,6 +101,20 @@ export default function Home() {
         </div>
       </section>
 
+      {/* PACE 核心概念可视化 */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <PaceConceptDiagram />
+        </div>
+      </section>
+
+      {/* 人机协作能力对比 */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <HumanAiRadarChart />
+        </div>
+      </section>
+
       {/* Method Overview */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -181,6 +197,14 @@ export default function Home() {
             >
               查看成功案例
             </Link>
+            <a
+              href="https://github.com/pace-eng/pace"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-800 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors"
+            >
+              GitHub 开源项目
+            </a>
           </div>
         </div>
       </section>

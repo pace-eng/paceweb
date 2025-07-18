@@ -1,0 +1,273 @@
+'use client';
+
+import { useState } from 'react';
+
+interface WorkflowSwimlaneProps {
+  className?: string;
+}
+
+export default function WorkflowSwimlane({ className = '' }: WorkflowSwimlaneProps) {
+  const [activePhase, setActivePhase] = useState<string | null>(null);
+
+  const phases = [
+    {
+      id: 'phase0',
+      name: '阶段 0: 蓝图规划',
+      color: '#3B82F6',
+      duration: '1-2周',
+      description: '从想法到可执行路线图',
+      steps: [
+        { id: 'input', name: '输入原始材料', actor: 'human', description: '想法、用户故事、访谈记录' },
+        { id: 'analysis', name: 'AI辅助分析', actor: 'ai', description: '提炼核心用户故事' },
+        { id: 'prototype', name: '生成HTML原型', actor: 'ai', description: '可交互的原型界面' },
+        { id: 'validation', name: 'PRD验证优化', actor: 'human', description: '验证用户体验' },
+        { id: 'roadmap', name: '垂直切片路线图', actor: 'ai', description: '开发路线图' },
+        { id: 'approval', name: '评审批准', actor: 'human', description: '最终决策' }
+      ]
+    },
+    {
+      id: 'phase1',
+      name: '阶段 1: 切片循环',
+      color: '#10B981',
+      duration: '持续迭代',
+      description: '四步循环：定义→评审→实现→验证',
+      steps: [
+        { id: 'define', name: '定义', actor: 'human', description: '创建引用式任务卡' },
+        { id: 'review', name: '评审', actor: 'human', description: '团队批准任务卡' },
+        { id: 'implement', name: '实现', actor: 'ai', description: 'AI驱动编码' },
+        { id: 'verify', name: '验证', actor: 'human', description: '代码评审与集成' }
+      ]
+    }
+  ];
+
+  const actors = [
+    { id: 'human', name: '人类工程师', color: '#3B82F6' },
+    { id: 'ai', name: 'AI系统', color: '#8B5CF6' },
+    { id: 'collaboration', name: '协作区域', color: '#10B981' }
+  ];
+
+  return (
+    <div className={`w-full ${className}`}>
+      <div className="text-center mb-8">
+        <h2 className="text-3xl font-bold text-gray-900 mb-2">PACE 1.0 完整工作流程</h2>
+        <p className="text-gray-600">从想法到代码的系统化协作流程</p>
+      </div>
+
+      <div className="flex flex-col items-center gap-8">
+        {/* 主要流程图 */}
+        <div className="w-full overflow-x-auto">
+          <svg
+            viewBox="0 0 1200 600"
+            className="w-full h-auto min-w-[800px]"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            {/* 定义渐变 */}
+            <defs>
+              <linearGradient id="humanGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.1" />
+                <stop offset="100%" stopColor="#3B82F6" stopOpacity="0.05" />
+              </linearGradient>
+              <linearGradient id="aiGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#8B5CF6" stopOpacity="0.1" />
+                <stop offset="100%" stopColor="#8B5CF6" stopOpacity="0.05" />
+              </linearGradient>
+              <linearGradient id="collabGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#10B981" stopOpacity="0.1" />
+                <stop offset="100%" stopColor="#10B981" stopOpacity="0.05" />
+              </linearGradient>
+              
+              {/* 箭头标记 */}
+              <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+                      refX="9" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="#6B7280" />
+              </marker>
+            </defs>
+
+            {/* 泳道背景 */}
+            <rect x="50" y="100" width="1100" height="120" fill="url(#humanGradient)" />
+            <rect x="50" y="220" width="1100" height="120" fill="url(#aiGradient)" />
+            <rect x="50" y="340" width="1100" height="120" fill="url(#collabGradient)" />
+
+            {/* 泳道标签 */}
+            <g className="text-sm font-semibold">
+              <text x="20" y="160" textAnchor="middle" fill="#3B82F6" transform="rotate(-90 20 160)">
+                人类工程师
+              </text>
+              <text x="20" y="280" textAnchor="middle" fill="#8B5CF6" transform="rotate(-90 20 280)">
+                AI系统
+              </text>
+              <text x="20" y="400" textAnchor="middle" fill="#10B981" transform="rotate(-90 20 400)">
+                协作区域
+              </text>
+            </g>
+
+            {/* 阶段分隔线 */}
+            <line x1="650" y1="80" x2="650" y2="480" stroke="#D1D5DB" strokeWidth="2" strokeDasharray="5,5" />
+            
+            {/* 阶段标题 */}
+            <text x="350" y="70" textAnchor="middle" className="text-lg font-bold" fill="#3B82F6">
+              阶段 0: 蓝图规划
+            </text>
+            <text x="925" y="70" textAnchor="middle" className="text-lg font-bold" fill="#10B981">
+              阶段 1: 切片循环
+            </text>
+
+            {/* 阶段 0 步骤 */}
+            <g>
+              {/* 输入原始材料 */}
+              <rect x="80" y="130" width="100" height="60" rx="8" fill="#3B82F6" className="cursor-pointer"
+                    onClick={() => setActivePhase('input')} />
+              <text x="130" y="155" textAnchor="middle" className="text-sm font-medium fill-white">输入原始</text>
+              <text x="130" y="170" textAnchor="middle" className="text-sm font-medium fill-white">材料</text>
+
+              {/* AI辅助分析 */}
+              <rect x="220" y="250" width="100" height="60" rx="8" fill="#8B5CF6" className="cursor-pointer"
+                    onClick={() => setActivePhase('analysis')} />
+              <text x="270" y="275" textAnchor="middle" className="text-sm font-medium fill-white">AI辅助</text>
+              <text x="270" y="290" textAnchor="middle" className="text-sm font-medium fill-white">分析</text>
+
+              {/* HTML原型 */}
+              <rect x="360" y="250" width="100" height="60" rx="8" fill="#8B5CF6" className="cursor-pointer"
+                    onClick={() => setActivePhase('prototype')} />
+              <text x="410" y="275" textAnchor="middle" className="text-sm font-medium fill-white">HTML</text>
+              <text x="410" y="290" textAnchor="middle" className="text-sm font-medium fill-white">原型</text>
+
+              {/* PRD验证 */}
+              <rect x="500" y="130" width="100" height="60" rx="8" fill="#3B82F6" className="cursor-pointer"
+                    onClick={() => setActivePhase('validation')} />
+              <text x="550" y="155" textAnchor="middle" className="text-sm font-medium fill-white">PRD验证</text>
+              <text x="550" y="170" textAnchor="middle" className="text-sm font-medium fill-white">优化</text>
+
+              {/* 连接线 */}
+              <path d="M 180 160 L 220 160 L 220 280 L 220 280" stroke="#6B7280" strokeWidth="2" 
+                    fill="none" markerEnd="url(#arrowhead)" />
+              <path d="M 320 280 L 360 280" stroke="#6B7280" strokeWidth="2" 
+                    fill="none" markerEnd="url(#arrowhead)" />
+              <path d="M 460 280 L 500 280 L 500 160 L 500 160" stroke="#6B7280" strokeWidth="2" 
+                    fill="none" markerEnd="url(#arrowhead)" />
+            </g>
+
+            {/* 阶段 1 步骤 */}
+            <g>
+              {/* 定义 */}
+              <rect x="700" y="130" width="80" height="60" rx="8" fill="#3B82F6" className="cursor-pointer"
+                    onClick={() => setActivePhase('define')} />
+              <text x="740" y="165" textAnchor="middle" className="text-sm font-medium fill-white">定义</text>
+
+              {/* 评审 */}
+              <rect x="820" y="130" width="80" height="60" rx="8" fill="#3B82F6" className="cursor-pointer"
+                    onClick={() => setActivePhase('review')} />
+              <text x="860" y="165" textAnchor="middle" className="text-sm font-medium fill-white">评审</text>
+
+              {/* 实现 */}
+              <rect x="940" y="250" width="80" height="60" rx="8" fill="#8B5CF6" className="cursor-pointer"
+                    onClick={() => setActivePhase('implement')} />
+              <text x="980" y="285" textAnchor="middle" className="text-sm font-medium fill-white">实现</text>
+
+              {/* 验证 */}
+              <rect x="1060" y="130" width="80" height="60" rx="8" fill="#3B82F6" className="cursor-pointer"
+                    onClick={() => setActivePhase('verify')} />
+              <text x="1100" y="165" textAnchor="middle" className="text-sm font-medium fill-white">验证</text>
+
+              {/* 循环箭头 */}
+              <path d="M 780 160 L 820 160" stroke="#6B7280" strokeWidth="2" 
+                    fill="none" markerEnd="url(#arrowhead)" />
+              <path d="M 900 160 L 940 160 L 940 280 L 940 280" stroke="#6B7280" strokeWidth="2" 
+                    fill="none" markerEnd="url(#arrowhead)" />
+              <path d="M 1020 280 L 1060 280 L 1060 160 L 1060 160" stroke="#6B7280" strokeWidth="2" 
+                    fill="none" markerEnd="url(#arrowhead)" />
+              
+              {/* 回到定义的循环箭头 */}
+              <path d="M 1100 130 Q 1150 100 1150 50 Q 1150 20 740 20 Q 700 20 700 130" 
+                    stroke="#10B981" strokeWidth="2" fill="none" markerEnd="url(#arrowhead)" 
+                    strokeDasharray="5,5" />
+            </g>
+
+            {/* 协作指示器 */}
+            <g>
+              <circle cx="130" cy="400" r="8" fill="#10B981" />
+              <text x="150" y="405" className="text-xs fill-gray-600">需求收集</text>
+              
+              <circle cx="270" cy="400" r="8" fill="#10B981" />
+              <text x="290" y="405" className="text-xs fill-gray-600">分析协作</text>
+              
+              <circle cx="740" cy="400" r="8" fill="#10B981" />
+              <text x="760" y="405" className="text-xs fill-gray-600">任务协作</text>
+              
+              <circle cx="980" cy="400" r="8" fill="#10B981" />
+              <text x="1000" y="405" className="text-xs fill-gray-600">编码协作</text>
+            </g>
+
+            {/* 时间指示器 */}
+            <g className="text-xs fill-gray-500">
+              <text x="350" y="520" textAnchor="middle">1-2周</text>
+              <text x="925" y="520" textAnchor="middle">持续迭代</text>
+            </g>
+
+            {/* 活跃状态指示器 */}
+            {activePhase && (
+              <circle cx="400" cy="300" r="20" fill="none" stroke="#F59E0B" strokeWidth="3" opacity="0.7">
+                <animate attributeName="r" values="20;30;20" dur="2s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="0.7;0.3;0.7" dur="2s" repeatCount="indefinite" />
+              </circle>
+            )}
+          </svg>
+        </div>
+
+        {/* 详情面板 */}
+        <div className="w-full max-w-4xl">
+          {activePhase ? (
+            <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-blue-500">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">步骤详情</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">当前步骤</h4>
+                  <p className="text-gray-700">{activePhase}</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">主要活动</h4>
+                  <p className="text-gray-700">详细的步骤说明和操作指南</p>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="bg-gray-50 rounded-lg p-6 text-center">
+              <h3 className="text-lg font-semibold text-gray-600 mb-2">点击流程步骤</h3>
+              <p className="text-gray-500">选择流程图中的任一步骤，查看详细说明和操作指南</p>
+            </div>
+          )}
+        </div>
+
+        {/* 流程说明 */}
+        <div className="w-full max-w-4xl bg-gradient-to-r from-blue-50 to-green-50 rounded-lg p-6">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4 text-center">
+            流程核心特点
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="text-center">
+              <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-3">
+                0
+              </div>
+              <h4 className="font-semibold text-gray-900 mb-2">蓝图规划</h4>
+              <p className="text-sm text-gray-700">一次性投入，建立清晰的项目蓝图和开发路线图</p>
+            </div>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-3">
+                1
+              </div>
+              <h4 className="font-semibold text-gray-900 mb-2">切片循环</h4>
+              <p className="text-sm text-gray-700">持续迭代，每个循环交付一个完整的功能切片</p>
+            </div>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-3">
+                ∞
+              </div>
+              <h4 className="font-semibold text-gray-900 mb-2">价值交付</h4>
+              <p className="text-sm text-gray-700">从第一个切片开始，每次迭代都交付可用的价值</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

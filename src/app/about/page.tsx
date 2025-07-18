@@ -128,8 +128,33 @@ export default function AboutPage() {
             <li><strong>实践分享</strong>：分享您的PACE 1.0实施经验和案例</li>
             <li><strong>工具贡献</strong>：开发和分享支持PACE 1.0的工具和插件</li>
             <li><strong>文档完善</strong>：帮助改进和翻译方法论文档</li>
-            <li><strong>社区建设</strong>：参与社区活动和线下聚会</li>
+            <li><strong>开源贡献</strong>：在 <a href="https://github.com/pace-eng/pace" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">GitHub</a> 上提交代码和改进</li>
+            <li><strong>社区建设</strong>：参与 <a href="https://github.com/pace-eng/pace/discussions" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">GitHub 讨论</a> 和线下聚会</li>
           </ul>
+
+          <div className="bg-yellow-50 p-6 rounded-lg my-8">
+            <h3 className="text-lg font-semibold text-yellow-900 mb-4">开源项目信息</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <h4 className="font-semibold text-yellow-800">项目详情</h4>
+                <ul className="text-sm text-yellow-700 mt-2 space-y-1">
+                  <li>• 开源许可证：MIT License</li>
+                  <li>• 代码托管：GitHub</li>
+                  <li>• 主要语言：TypeScript, Markdown</li>
+                  <li>• 官方网站：pace.150404.xyz</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold text-yellow-800">快速链接</h4>
+                <ul className="text-sm text-yellow-700 mt-2 space-y-1">
+                  <li>• <a href="https://github.com/pace-eng/pace" target="_blank" rel="noopener noreferrer" className="hover:underline">主仓库</a></li>
+                  <li>• <a href="https://github.com/pace-eng/pace/discussions" target="_blank" rel="noopener noreferrer" className="hover:underline">社区讨论</a></li>
+                  <li>• <a href="https://github.com/pace-eng/pace/issues" target="_blank" rel="noopener noreferrer" className="hover:underline">问题反馈</a></li>
+                  <li>• <a href="https://github.com/pace-eng/pace/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" className="hover:underline">贡献指南</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
           <h2>未来展望</h2>
           <p>
@@ -165,16 +190,26 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/contact" 
+                href="https://github.com/pace-eng/pace" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                联系我们
+                访问 GitHub
               </a>
               <a 
-                href="/community" 
+                href="https://github.com/pace-eng/pace/discussions" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
-                加入社区
+                加入讨论
+              </a>
+              <a 
+                href="/contact" 
+                className="bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors"
+              >
+                联系我们
               </a>
             </div>
           </div>

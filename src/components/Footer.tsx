@@ -23,17 +23,23 @@ export default function Footer() {
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">关于我们</h3>
+            <h3 className="text-lg font-semibold mb-4">开源项目</h3>
             <ul className="space-y-2 text-sm">
+              <li><a href="https://github.com/pace-eng/pace" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">GitHub 仓库</a></li>
+              <li><a href="https://github.com/pace-eng/pace/discussions" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">社区讨论</a></li>
               <li><Link href="/about" className="text-gray-300 hover:text-white transition-colors">关于PACE</Link></li>
               <li><Link href="/contact" className="text-gray-300 hover:text-white transition-colors">联系我们</Link></li>
-              <li><Link href="/community" className="text-gray-300 hover:text-white transition-colors">社区</Link></li>
             </ul>
           </div>
         </div>
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-300">
-          <p>&copy; 2025 PACE 方法论研究小组. 保留所有权利.</p>
+          <p>&copy; 2025 PACE 方法论研究小组. 采用 MIT 开源许可证.</p>
+          <p className="mt-2">
+            <a href="https://github.com/pace-eng/pace" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors">
+              访问 GitHub 仓库
+            </a>
+          </p>
         </div>
       </div>
     </footer>

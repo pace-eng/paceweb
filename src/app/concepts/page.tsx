@@ -1,5 +1,7 @@
 import Layout from '@/components/Layout';
 import Link from 'next/link';
+import ContextEngineeringFlow from '@/components/svg/ContextEngineeringFlow';
+import TaskLevelPyramid from '@/components/svg/TaskLevelPyramid';
 
 export default function ConceptsPage() {
   return (
@@ -20,42 +22,9 @@ export default function ConceptsPage() {
             上下文工程是PACE 1.0的核心技术，它是一门设计和构建动态系统的学科，能够在正确的时间，以正确的格式，为AI提供恰当的信息和工具。
           </p>
 
-          <div className="bg-blue-50 p-6 rounded-lg my-8">
-            <h3 className="text-lg font-semibold text-blue-900 mb-3">上下文的三个层次</h3>
-            <div className="space-y-4">
-              <div>
-                <h4 className="font-semibold text-blue-800">信息的结构化组织</h4>
-                <p className="text-sm text-blue-700">如何将复杂的业务需求转化为AI可理解的结构化描述</p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-blue-800">认知负荷的管理</h4>
-                <p className="text-sm text-blue-700">如何在有限的上下文窗口内传递最关键的信息</p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-blue-800">意图的精确传达</h4>
-                <p className="text-sm text-blue-700">如何确保AI理解人类的真实意图而非表面需求</p>
-              </div>
-            </div>
-          </div>
-
-          <h3>分层上下文模型</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-            <div className="border border-red-200 p-4 rounded-lg">
-              <h4 className="font-semibold text-red-800">核心上下文（必须）</h4>
-              <p className="text-sm text-red-600">任务卡本身、直接依赖的接口</p>
-            </div>
-            <div className="border border-orange-200 p-4 rounded-lg">
-              <h4 className="font-semibold text-orange-800">关键上下文（重要）</h4>
-              <p className="text-sm text-orange-600">相关架构文档、数据模型、业务规则</p>
-            </div>
-            <div className="border border-yellow-200 p-4 rounded-lg">
-              <h4 className="font-semibold text-yellow-800">辅助上下文（有用）</h4>
-              <p className="text-sm text-yellow-600">代码示例、历史实现、最佳实践</p>
-            </div>
-            <div className="border border-green-200 p-4 rounded-lg">
-              <h4 className="font-semibold text-green-800">背景上下文（可选）</h4>
-              <p className="text-sm text-green-600">详细需求、用户故事、业务背景</p>
-            </div>
+          {/* 上下文工程可视化 */}
+          <div className="my-16">
+            <ContextEngineeringFlow />
           </div>
 
           <h2>垂直切片策略（Vertical Slicing）</h2>
@@ -92,78 +61,9 @@ export default function ConceptsPage() {
             基于任务的复杂度和AI的适用性，PACE 1.0建立了四级分类体系，每个级别都有相应的协作模式。
           </p>
 
-          <div className="space-y-6 my-8">
-            <div className="border-l-4 border-green-500 pl-6">
-              <h3 className="text-lg font-semibold text-green-800">Level 1 - 标准化实现任务</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-3">
-                <div>
-                  <h4 className="font-semibold text-sm">特征</h4>
-                  <p className="text-sm text-gray-600">明确的输入输出，标准化的实现模式</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-sm">AI参与度</h4>
-                  <p className="text-sm text-gray-600">85-95%</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-sm">协作模式</h4>
-                  <p className="text-sm text-gray-600">AI主导执行，人类监督验证</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="border-l-4 border-blue-500 pl-6">
-              <h3 className="text-lg font-semibold text-blue-800">Level 2 - 集成协调任务</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-3">
-                <div>
-                  <h4 className="font-semibold text-sm">特征</h4>
-                  <p className="text-sm text-gray-600">多模块交互，需要考虑系统一致性</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-sm">AI参与度</h4>
-                  <p className="text-sm text-gray-600">60-80%</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-sm">协作模式</h4>
-                  <p className="text-sm text-gray-600">人类设计框架，AI实现细节</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="border-l-4 border-orange-500 pl-6">
-              <h3 className="text-lg font-semibold text-orange-800">Level 3 - 架构设计任务</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-3">
-                <div>
-                  <h4 className="font-semibold text-sm">特征</h4>
-                  <p className="text-sm text-gray-600">需要权衡多个因素，涉及技术选型</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-sm">AI参与度</h4>
-                  <p className="text-sm text-gray-600">30-50%</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-sm">协作模式</h4>
-                  <p className="text-sm text-gray-600">人机深度协作，共同探索方案</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="border-l-4 border-purple-500 pl-6">
-              <h3 className="text-lg font-semibold text-purple-800">Level 4 - 创新探索任务</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-3">
-                <div>
-                  <h4 className="font-semibold text-sm">特征</h4>
-                  <p className="text-sm text-gray-600">高度不确定性，需要创造性思维</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-sm">AI参与度</h4>
-                  <p className="text-sm text-gray-600">10-30%</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-sm">协作模式</h4>
-                  <p className="text-sm text-gray-600">人类主导创新，AI提供支持</p>
-                </div>
-              </div>
-            </div>
+          {/* 任务分级立体金字塔可视化 */}
+          <div className="my-16">
+            <TaskLevelPyramid />
           </div>
 
           <h2>适应性架构治理</h2>

@@ -1,5 +1,6 @@
 import Layout from '@/components/Layout';
 import Link from 'next/link';
+import WorkflowSwimlane from '@/components/svg/WorkflowSwimlane';
 
 export default function MethodologyPage() {
   return (
@@ -156,6 +157,11 @@ export default function MethodologyPage() {
                 高度不确定性，需要创造性思维。如新技术验证、算法创新等。
               </p>
             </div>
+          </div>
+
+          {/* PACE 工作流程可视化 */}
+          <div className="my-16">
+            <WorkflowSwimlane />
           </div>
 
           <h2>下一步</h2>
