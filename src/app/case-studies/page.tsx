@@ -94,7 +94,7 @@ export default function CaseStudiesPage() {
           <div className="bg-yellow-50 p-6 rounded-lg my-8">
             <h3 className="text-lg font-semibold text-yellow-900 mb-3">经验总结</h3>
             <p className="text-yellow-800 mb-3">
-              "PACE 1.0让我们在保证质量的前提下，显著提升了开发效率。最重要的是，团队对AI协作的信心大大增强。"
+              &ldquo;PACE 1.0让我们在保证质量的前提下，显著提升了开发效率。最重要的是，团队对AI协作的信心大大增强。&rdquo;
             </p>
             <p className="text-sm text-yellow-700">
               —— 项目技术负责人 张工程师
@@ -195,7 +195,7 @@ export default function CaseStudiesPage() {
           <div className="bg-green-50 p-6 rounded-lg my-8">
             <h3 className="text-lg font-semibold text-green-900 mb-3">创始人感言</h3>
             <p className="text-green-800 mb-3">
-              "PACE 1.0让我们这样的小团队也能快速构建高质量的产品。AI协作不仅提升了效率，更重要的是让我们能专注于产品创新和用户体验。"
+              &ldquo;PACE 1.0让我们这样的小团队也能快速构建高质量的产品。AI协作不仅提升了效率，更重要的是让我们能专注于产品创新和用户体验。&rdquo;
             </p>
             <p className="text-sm text-green-700">
               —— 产品创始人 李总

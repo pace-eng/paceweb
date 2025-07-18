@@ -17,7 +17,7 @@ export default function MethodologyPage() {
         <div className="prose prose-lg max-w-none">
           <h2>方法论名称解释</h2>
           <p>
-            <strong>PACE</strong> 是 <strong>Programmatic AI Collaboration Engineering</strong> 的缩写，中文译为"程序化AI协作工程"，其含义为：
+            <strong>PACE</strong> 是 <strong>Programmatic AI Collaboration Engineering</strong> 的缩写，中文译为&ldquo;程序化AI协作工程&rdquo;，其含义为：
           </p>
           <ul>
             <li><strong>Programmatic（程序化）</strong>：强调系统化、结构化的工程方法，通过明确的流程、规范和工具来管理复杂的开发过程</li>
@@ -83,7 +83,7 @@ export default function MethodologyPage() {
 
           <h2>解决方案：上下文工程</h2>
           <p>
-            PACE 1.0通过引入"上下文工程"来解决这些问题——一门设计和构建动态系统的学科，能够在正确的时间，以正确的格式，为AI提供恰当的信息和工具。
+            PACE 1.0通过引入&ldquo;上下文工程&rdquo;来解决这些问题——一门设计和构建动态系统的学科，能够在正确的时间，以正确的格式，为AI提供恰当的信息和工具。
           </p>
 
           <h3>上下文工程的核心要素</h3>
@@ -106,7 +106,7 @@ export default function MethodologyPage() {
                 <ul className="text-sm text-gray-600 mt-2 space-y-1">
                   <li>• 关注产品层面的市场验证</li>
                   <li>• 目标是验证商业假设</li>
-                  <li>• 允许"脏快"的实现方式</li>
+                  <li>• 允许&ldquo;脏快&rdquo;的实现方式</li>
                   <li>• 验证完毕后可能被重写</li>
                 </ul>
               </div>

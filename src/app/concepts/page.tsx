@@ -192,14 +192,14 @@ export default function ConceptsPage() {
 
           <h2>智能化任务卡体系</h2>
           <p>
-            任务卡不仅是项目管理的工具，更是为AI的Transformer架构量身定做的"AI友好"输入格式。
+            任务卡不仅是项目管理的工具，更是为AI的Transformer架构量身定做的&ldquo;AI友好&rdquo;输入格式。
           </p>
 
           <h3>任务卡设计原则</h3>
           <ul>
-            <li><strong>为"有限上下文"设计</strong>：包含执行任务所需的全部信息</li>
-            <li><strong>为"概率性生成"设计</strong>：用确定性规格取代模糊描述</li>
-            <li><strong>为"序列化输出"设计</strong>：提供清晰的思维脚手架</li>
+            <li><strong>为&ldquo;有限上下文&rdquo;设计</strong>：包含执行任务所需的全部信息</li>
+            <li><strong>为&ldquo;概率性生成&rdquo;设计</strong>：用确定性规格取代模糊描述</li>
+            <li><strong>为&ldquo;序列化输出&rdquo;设计</strong>：提供清晰的思维脚手架</li>
           </ul>
 
           <div className="bg-yellow-50 p-6 rounded-lg my-8">
