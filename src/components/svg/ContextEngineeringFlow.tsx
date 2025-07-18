@@ -18,7 +18,7 @@ export default function ContextEngineeringFlow({ className = '' }: ContextEngine
       description: '任务卡本身、直接依赖的接口',
       examples: ['任务描述', '输入输出规格', '直接依赖'],
       radius: 60,
-      position: { x: 250, y: 225 }
+      position: { x: 250, y: 250 }
     },
     {
       id: 'key',
@@ -28,7 +28,7 @@ export default function ContextEngineeringFlow({ className = '' }: ContextEngine
       description: '相关架构文档、数据模型、业务规则',
       examples: ['架构文档', '数据模型', '业务规则', 'API规范'],
       radius: 90,
-      position: { x: 250, y: 225 }
+      position: { x: 250, y: 250 }
     },
     {
       id: 'auxiliary',
@@ -38,7 +38,7 @@ export default function ContextEngineeringFlow({ className = '' }: ContextEngine
       description: '代码示例、历史实现、最佳实践',
       examples: ['代码示例', '历史实现', '最佳实践', '设计模式'],
       radius: 120,
-      position: { x: 250, y: 225 }
+      position: { x: 250, y: 250 }
     },
     {
       id: 'background',
@@ -48,7 +48,7 @@ export default function ContextEngineeringFlow({ className = '' }: ContextEngine
       description: '详细需求、用户故事、业务背景',
       examples: ['用户故事', '业务背景', '详细需求', '历史演进'],
       radius: 150,
-      position: { x: 250, y: 225 }
+      position: { x: 250, y: 250 }
     }
   ];
 
@@ -57,21 +57,21 @@ export default function ContextEngineeringFlow({ className = '' }: ContextEngine
       id: 'input',
       name: '信息输入',
       x: 100,
-      y: 225,
+      y: 250,
       description: '业务需求、技术规格、历史数据'
     },
     {
       id: 'processing',
       name: '上下文处理',
       x: 250,
-      y: 225,
+      y: 250,
       description: '结构化组织、优先级排序、格式转换'
     },
     {
       id: 'output',
       name: 'AI理解',
       x: 400,
-      y: 225,
+      y: 250,
       description: '任务执行、代码生成、质量保障'
     }
   ];
@@ -87,7 +87,7 @@ export default function ContextEngineeringFlow({ className = '' }: ContextEngine
         {/* 主要流程图 */}
         <div className="flex-1 lg:flex-[3]">
           <svg
-            viewBox="0 0 500 500"
+            viewBox="0 0 500 600"
             className="w-full max-w-lg h-auto"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -125,10 +125,10 @@ export default function ContextEngineeringFlow({ className = '' }: ContextEngine
               </defs>
               
               {/* 主流程箭头 */}
-              <path d="M 130 225 Q 190 205 210 225" strokeDasharray="5,5">
+              <path d="M 130 250 Q 190 230 210 250" strokeDasharray="5,5">
                 <animate attributeName="stroke-dashoffset" values="0;-10" dur="2s" repeatCount="indefinite"/>
               </path>
-              <path d="M 290 225 Q 350 205 370 225" strokeDasharray="5,5">
+              <path d="M 290 250 Q 350 230 370 250" strokeDasharray="5,5">
                 <animate attributeName="stroke-dashoffset" values="0;-10" dur="2s" repeatCount="indefinite"/>
               </path>
               
@@ -171,9 +171,9 @@ export default function ContextEngineeringFlow({ className = '' }: ContextEngine
                 {/* 层级标签 */}
                 <text
                   x={layer.position.x}
-                  y={layer.position.y - layer.radius - 10}
+                  y={layer.position.y - layer.radius - 15}
                   textAnchor="middle"
-                  className={`text-xs font-semibold cursor-pointer select-none transition-all duration-300 ${
+                  className={`text-sm font-semibold cursor-pointer select-none transition-all duration-300 ${
                     activeLayer === layer.id ? 'text-gray-900' : 'text-gray-600'
                   }`}
                   fill={activeLayer === layer.id ? layer.color : '#6B7280'}
@@ -185,7 +185,7 @@ export default function ContextEngineeringFlow({ className = '' }: ContextEngine
                 {/* 优先级标签 */}
                 <text
                   x={layer.position.x}
-                  y={layer.position.y - layer.radius + 5}
+                  y={layer.position.y - layer.radius + 2}
                   textAnchor="middle"
                   className="text-xs cursor-pointer select-none"
                   fill={layer.color}
@@ -239,7 +239,7 @@ export default function ContextEngineeringFlow({ className = '' }: ContextEngine
                     <text
                       key={textIndex}
                       x={node.x}
-                      y={node.y + 62 + textIndex * 12}
+                      y={node.y + 62 + textIndex * 16}
                       textAnchor="middle"
                       className="text-xs text-gray-600"
                     >
@@ -252,17 +252,17 @@ export default function ContextEngineeringFlow({ className = '' }: ContextEngine
 
             {/* 认知负荷指示器 */}
             <g className="text-xs fill-gray-600">
-              <text x="250" y="30" textAnchor="middle" className="font-semibold">认知负荷管理</text>
-              <rect x="200" y="40" width="100" height="10" fill="#E5E7EB" rx="5" />
-              <rect x="200" y="40" width="70" height="10" fill="#F59E0B" rx="5" />
-              <text x="250" y="65" textAnchor="middle">优化信息密度</text>
+              <text x="250" y="25" textAnchor="middle" className="font-semibold">认知负荷管理</text>
+              <rect x="200" y="35" width="100" height="8" fill="#E5E7EB" rx="4" />
+              <rect x="200" y="35" width="70" height="8" fill="#F59E0B" rx="4" />
+              <text x="250" y="55" textAnchor="middle">优化信息密度</text>
             </g>
 
             {/* 活跃状态的脉冲效果 */}
             {activeLayer && (
               <circle
                 cx="250"
-                cy="225"
+                cy="250"
                 r={contextLayers.find(l => l.id === activeLayer)?.radius || 60}
                 fill="none"
                 stroke={contextLayers.find(l => l.id === activeLayer)?.color || '#3B82F6'}

@@ -211,7 +211,7 @@ export default function BestPracticesPage() {
               <ul className="text-sm text-gray-600 space-y-2">
                 <li>• <strong>IDE</strong>: VS Code + AI插件</li>
                 <li>• <strong>版本控制</strong>: Git + GitHub/GitLab</li>
-                <li>• <strong>AI助手</strong>: Claude, GPT-4, Copilot</li>
+                <li>• <strong>AI助手</strong>: Claude Code, openai-GPT-o3, Copilot, Gemini-cli</li>
                 <li>• <strong>代码质量</strong>: ESLint, Prettier, SonarQube</li>
               </ul>
             </div>
