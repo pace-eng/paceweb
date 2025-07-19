@@ -1,6 +1,10 @@
 import Layout from '@/components/Layout';
 import Link from 'next/link';
 import WorkflowSwimlane from '@/components/svg/WorkflowSwimlane';
+import AiToolsIntegration from '@/components/svg/AiToolsIntegration';
+import AttentionManagement from '@/components/svg/AttentionManagement';
+import DualModeFramework from '@/components/svg/DualModeFramework';
+import TaskCardEvolution from '@/components/svg/TaskCardEvolution';
 
 export default function MethodologyPage() {
   return (
@@ -8,10 +12,10 @@ export default function MethodologyPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            PACE 1.0 方法论概述
+            PACE 1.1 方法论概述
           </h1>
           <p className="text-xl text-gray-600">
-            程序化AI协作工程体系的完整介绍
+            程序化AI协作工程体系的完整介绍 · AI协作增强版
           </p>
         </div>
 
@@ -177,6 +181,60 @@ export default function MethodologyPage() {
           {/* PACE 工作流程可视化 */}
           <div className="my-16">
             <WorkflowSwimlane />
+          </div>
+
+          <h2>AI协作工具深度集成 (v1.1新增)</h2>
+          <p>
+            PACE 1.1 版本针对现代AI编程工具进行了深度优化，特别是对Claude Code和Cursor等主流工具的协作策略进行了系统化设计。
+          </p>
+
+          <div className="bg-blue-50 p-6 rounded-lg my-8 border border-blue-200">
+            <h3 className="text-lg font-semibold text-blue-900 mb-3">工具协作策略</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-blue-100 p-4 rounded-lg border border-blue-300">
+                <h4 className="font-semibold text-blue-800">深度规划 + 快速执行</h4>
+                <p className="text-sm text-blue-700 mt-2">Claude Code负责整体设计，Cursor负责具体实现</p>
+              </div>
+              <div className="bg-purple-100 p-4 rounded-lg border border-purple-300">
+                <h4 className="font-semibold text-purple-800">阶段性工具切换</h4>
+                <p className="text-sm text-purple-700 mt-2">复杂逻辑使用Claude Code，重复性工作使用Cursor</p>
+              </div>
+            </div>
+          </div>
+
+          {/* AI工具集成可视化 */}
+          <div className="my-16">
+            <AiToolsIntegration />
+          </div>
+
+          <h2>任务卡AI适配增强</h2>
+          <p>
+            传统任务卡主要面向人类理解，而AI协作需要更结构化、更精确的信息传递。PACE 1.1 引入了专门的AI协作指导部分。
+          </p>
+
+          {/* 任务卡演进可视化 */}
+          <div className="my-16">
+            <TaskCardEvolution />
+          </div>
+
+          <h2>注意力管理与目标聚焦</h2>
+          <p>
+            长任务执行中最大的风险是目标偏移。PACE 1.1 建立了系统性的注意力管理机制，确保AI协作始终聚焦核心目标。
+          </p>
+
+          {/* 注意力管理可视化 */}
+          <div className="my-16">
+            <AttentionManagement />
+          </div>
+
+          <h2>个体与团队双模式支持</h2>
+          <p>
+            PACE 1.1 支持从&ldquo;超级个体&rdquo;到&ldquo;团队协作&rdquo;的无缝切换，平衡个体效率和团队一致性。
+          </p>
+
+          {/* 双模式框架可视化 */}
+          <div className="my-16">
+            <DualModeFramework />
           </div>
 
           <h2>下一步</h2>

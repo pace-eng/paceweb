@@ -29,8 +29,9 @@ export default function ImplementationPage() {
       color: 'bg-emerald-500',
       activities: [
         '团队培训：AI工具使用和提示工程基础',
-        '工具链搭建：开发环境、任务管理系统',
-        '标准制定：任务卡模板、代码规范',
+        'AI工具配置：Claude Code和Cursor深度集成',
+        '双模式设置：个体和团队模式配置',
+        '任务卡模板：AI协作增强版模板制定',
         '试点项目：选择1-2个小型项目'
       ],
       outcomes: [
@@ -48,9 +49,9 @@ export default function ImplementationPage() {
       icon: <RocketIcon className="text-white" size={24} />,
       color: 'bg-blue-500',
       activities: [
-        '进阶培训：上下文设计、质量评估',
-        '流程优化：基于试点经验优化',
-        '工具集成：集成更多AI工具',
+        '进阶培训：注意力管理、目标聚焦机制',
+        '错误学习：建立AI协作错误学习系统',
+        '模式切换：练习个体与团队模式切换',
         '规模扩展：应用到更多项目'
       ],
       outcomes: [
@@ -74,9 +75,9 @@ export default function ImplementationPage() {
         '持续改进：反馈机制建立'
       ],
       outcomes: [
-        '80%以上项目采用PACE 1.0',
+        '80%以上项目采用PACE 1.1',
         '完善的知识管理体系',
-        '持续改进的文化',
+        '灵活的双模式操作能力',
         '整体效率提升50%以上'
       ]
     }
@@ -115,9 +116,9 @@ export default function ImplementationPage() {
   return (
     <Layout>
       <HeroSection
-        subtitle="PACE 1.0 方法论"
+        subtitle="PACE 1.1 方法论"
         title="实施指南"
-        description="通过结构化的三阶段方法，在您的团队中成功实施PACE 1.0方法论"
+        description="通过结构化的三阶段方法，在您的团队中成功实施PACE 1.1方法论，支持个体与团队双模式操作"
       >
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link 
@@ -148,7 +149,7 @@ export default function ImplementationPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">渐进式实施策略</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              PACE 1.0的实施应该采用渐进式策略，避免激进变革带来的风险。我们建议分三个阶段进行
+              PACE 1.1的实施应该采用渐进式策略，避免激进变革带来的风险。支持从个体模式平滑过渡到团队模式。我们建议分三个阶段进行
             </p>
           </div>
 
@@ -223,12 +224,12 @@ export default function ImplementationPage() {
           </div>
         </div>
 
-        {/* PACE 1.0 工作流程 */}
+        {/* PACE 1.1 工作流程 */}
         <div className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">PACE 1.0 工作流程</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">PACE 1.1 工作流程</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              PACE 1.0 的核心工作流程分为两个主要阶段：蓝图规划和切片循环
+              PACE 1.1 的核心工作流程分为两个主要阶段：蓝图规划和切片循环，增强了AI工具协作和注意力管理
             </p>
           </div>
 
@@ -263,12 +264,82 @@ export default function ImplementationPage() {
           </div>
         </div>
 
+        {/* 双模式配置指南 */}
+        <div className="mb-16">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">双模式配置指南</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              PACE 1.1 支持个体和团队双模式操作，根据项目规模和需求灵活选择
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <Card className="border-blue-200">
+              <CardHeader>
+                <h3 className="text-xl font-semibold text-blue-800 flex items-center">
+                  <span className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm mr-3">👤</span>
+                  个体模式配置
+                </h3>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="p-4 bg-blue-50 rounded-lg">
+                    <h4 className="font-semibold text-blue-900 mb-2">工具配置</h4>
+                    <div className="text-sm text-blue-700 space-y-1">
+                      <p>• ~/.claude/CLAUDE.md (个人配置)</p>
+                      <p>• 个人代码风格和偏好设置</p>
+                      <p>• 常用提示模板库</p>
+                    </div>
+                  </div>
+                  <div className="p-4 bg-blue-50 rounded-lg">
+                    <h4 className="font-semibold text-blue-900 mb-2">任务卡模板</h4>
+                    <div className="text-sm text-blue-700 space-y-1">
+                      <p>• 简化版任务卡格式</p>
+                      <p>• 个人笔记区域</p>
+                      <p>• 快速原型开发模式</p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-green-200">
+              <CardHeader>
+                <h3 className="text-xl font-semibold text-green-800 flex items-center">
+                  <span className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white text-sm mr-3">👥</span>
+                  团队模式配置
+                </h3>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="p-4 bg-green-50 rounded-lg">
+                    <h4 className="font-semibold text-green-900 mb-2">统一配置</h4>
+                    <div className="text-sm text-green-700 space-y-1">
+                      <p>• CLAUDE.md (团队项目配置)</p>
+                      <p>• @.pace/team-standards.md</p>
+                      <p>• 统一的架构约束和规范</p>
+                    </div>
+                  </div>
+                  <div className="p-4 bg-green-50 rounded-lg">
+                    <h4 className="font-semibold text-green-900 mb-2">协作流程</h4>
+                    <div className="text-sm text-green-700 space-y-1">
+                      <p>• 完整版任务卡格式</p>
+                      <p>• 团队评审和质量要求</p>
+                      <p>• 标准化验收清单</p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
         {/* 项目结构建议 */}
         <div className="mb-16">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">项目结构建议</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              为了支持PACE 1.0方法论的高效执行，建议采用以下项目结构
+              为了支持PACE 1.1方法论的高效执行，建议采用以下项目结构
             </p>
           </div>
 
@@ -276,19 +347,29 @@ export default function ImplementationPage() {
             <CardContent className="p-8">
               <div className="bg-gray-900 text-gray-100 p-6 rounded-lg font-mono text-sm overflow-x-auto">
                 <pre className="whitespace-pre">{`project-root/
-├── docs/                           # 项目文档
-│   ├── architecture.md            # 架构设计文档
-│   ├── roadmap.md                 # 产品路线图
-│   └── shared-kernel/             # 共享核心库文档
-├── specs/                          # 任务卡规格文档
+├── .pace/                          # PACE 1.1 配置目录
+│   ├── memory/                    # 项目记忆库
+│   │   ├── decisions/            # 架构决策记录(ADR)
+│   │   ├── patterns/             # 代码模式和最佳实践
+│   │   └── lessons/              # 经验教训
+│   ├── current/                   # 当前状态
+│   │   ├── focus.md             # 当前焦点和目标
+│   │   └── progress.md          # 进度跟踪
+│   └── templates/                 # 任务卡模板
+├── docs/                          # 项目文档
+│   ├── architecture.md           # 架构设计文档
+│   ├── roadmap.md                # 产品路线图
+│   └── shared-kernel/            # 共享核心库文档
+├── specs/                         # 任务卡规格文档
 │   ├── slice-1.1-user-auth.spec.md
 │   ├── slice-1.2-product-list.spec.md
 │   └── refactor-1.0-data-models.spec.md
-├── src/                           # 源代码
-│   ├── shared-kernel/             # 共享核心库
-│   ├── features/                  # 功能模块
-│   └── config/                    # 配置文件
-└── tests/                         # 测试代码`}</pre>
+├── src/                          # 源代码
+│   ├── shared-kernel/            # 共享核心库
+│   ├── features/                 # 功能模块
+│   └── config/                   # 配置文件
+├── CLAUDE.md                     # Claude Code 项目记忆
+└── tests/                        # 测试代码`}</pre>
               </div>
             </CardContent>
           </Card>
@@ -376,7 +457,7 @@ export default function ImplementationPage() {
 
         {/* 下一步行动 */}
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">准备开始实施PACE 1.0？</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">准备开始实施PACE 1.1？</h2>
           <p className="text-lg text-gray-600 mb-8">选择适合您的学习路径</p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">

@@ -11,13 +11,13 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              PACE 1.0 方法论
+              PACE 1.1 方法论
             </h1>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              程序化AI协作工程体系
+              程序化AI协作工程体系 · AI协作增强版
             </p>
             <p className="text-lg md:text-xl mb-12 max-w-3xl mx-auto opacity-80">
-              重新定义软件开发的协作模式，通过系统化的方法论让人机协作更加高效、可持续
+              重新定义软件开发的协作模式，深度集成Claude Code、Cursor等现代AI工具，让人机协作更加高效、可持续
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -45,11 +45,11 @@ export default function Home() {
               核心特性
             </h2>
             <p className="text-xl text-gray-600">
-              PACE 1.0 通过四个核心特性重新定义AI协作开发
+              PACE 1.1 通过五个核心特性重新定义AI协作开发
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             <div className="bg-blue-50 p-6 rounded-lg shadow-md border-l-4 border-blue-500">
               <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -95,6 +95,18 @@ export default function Home() {
               <h3 className="text-lg font-semibold mb-2 text-orange-900">架构治理</h3>
               <p className="text-orange-700">
                 适应性架构治理，确保系统长期健康和可维护性
+              </p>
+            </div>
+            
+            <div className="bg-indigo-50 p-6 rounded-lg shadow-md border-l-4 border-indigo-500">
+              <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold mb-2 text-indigo-900">AI工具集成</h3>
+              <p className="text-indigo-700">
+                深度集成Claude Code、Cursor等现代AI工具，实现最优人机分工
               </p>
             </div>
           </div>
