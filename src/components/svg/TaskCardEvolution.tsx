@@ -6,7 +6,7 @@ const TaskCardEvolution: React.FC = () => {
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">任务卡AI协作适配演进</h2>
         <p className="text-lg text-gray-600">
-          从传统任务卡到PACE 1.2标准化融合版本的演进过程
+          从传统任务卡到PACE标准化融合版本的演进过程
         </p>
       </div>
       
@@ -36,7 +36,7 @@ const TaskCardEvolution: React.FC = () => {
         <g>
           <rect x="80" y="150" width="350" height="500" rx="15" fill="url(#traditionalGradient)" stroke="#6B7280" strokeWidth="2" />
           <text x="255" y="180" textAnchor="middle" className="text-lg font-bold" fill="#374151">
-            传统任务卡 v1.0
+            传统任务卡
           </text>
           
           {/* 传统内容结构 */}
@@ -72,18 +72,18 @@ const TaskCardEvolution: React.FC = () => {
 
         {/* 演进箭头 */}
         <path d="M 450 400 L 550 400" stroke="url(#evolutionGradient)" strokeWidth="6" markerEnd="url(#arrowEvolution)" />
-        <text x="500" y="390" textAnchor="middle" className="text-sm font-bold" fill="#F59E0B">标准化融合</text>
-        <text x="500" y="420" textAnchor="middle" className="text-sm font-bold" fill="#F59E0B">1.2 升级</text>
+        <text x="500" y="350" textAnchor="middle" className="text-sm font-bold" fill="#F59E0B">标准化融合</text>
+        <text x="500" y="460" textAnchor="middle" className="text-sm font-bold" fill="#F59E0B">升级</text>
 
         {/* AI协作增强版任务卡 - 右侧 */}
         <g>
-          <rect x="570" y="100" width="550" height="730" rx="15" fill="url(#enhancedGradient)" stroke="#10B981" strokeWidth="3" />
+          <rect x="570" y="100" width="550" height="680" rx="15" fill="url(#enhancedGradient)" stroke="#10B981" strokeWidth="3" />
           <text x="845" y="130" textAnchor="middle" className="text-lg font-bold" fill="#047857">
-            标准化融合版任务卡 1.2
+            标准化融合版任务卡
           </text>
           
           {/* 增强内容结构 */}
-          <rect x="590" y="150" width="510" height="660" rx="8" fill="white" stroke="#10B981" strokeWidth="1" />
+          <rect x="590" y="150" width="510" height="610" rx="8" fill="white" stroke="#10B981" strokeWidth="1" />
           
           {/* 原有基础信息 (保留) */}
           <rect x="610" y="170" width="470" height="50" rx="5" fill="#F0F9FF" stroke="#3B82F6" strokeWidth="1" />
@@ -119,11 +119,11 @@ const TaskCardEvolution: React.FC = () => {
           <text x="620" y="615" className="text-xs" fill="#BE185D">• 保持专注于: [需要始终关注的核心要素]</text>
           <text x="620" y="630" className="text-xs" fill="#BE185D">• 时间盒限制: [防止过度优化的时间约束]</text>
 
-          {/* 新增: EARS语法支持 (1.2版本新增) */}
-          <rect x="610" y="660" width="470" height="60" rx="5" fill="#F0F9FF" stroke="#0EA5E9" strokeWidth="1" />
-          <text x="620" y="680" className="text-sm font-bold" fill="#0369A1">📝 EARS语法支持 (1.2新增)</text>
-          <text x="620" y="700" className="text-xs" fill="#0369A1">• 结构化需求表达: 当...时，系统应当...</text>
-          <text x="620" y="715" className="text-xs" fill="#0369A1">• 减少歧义，提升AI理解准确性</text>
+          {/* 新增: EARS语法支持  */}
+          <rect x="610" y="650" width="470" height="60" rx="5" fill="#F0F9FF" stroke="#0EA5E9" strokeWidth="1" />
+          <text x="620" y="670" className="text-sm font-bold" fill="#0369A1">📝 EARS语法支持</text>
+          <text x="620" y="690" className="text-xs" fill="#0369A1">• 结构化需求表达: 当...时，系统应当...</text>
+          <text x="620" y="705" className="text-xs" fill="#0369A1">• 减少歧义，提升AI理解准确性</text>
         </g>
 
         {/* 核心改进亮点 */}
@@ -169,7 +169,7 @@ const TaskCardEvolution: React.FC = () => {
 
         {/* 顶部标题 */}
         <text x="600" y="50" textAnchor="middle" className="text-xl font-bold" fill="#1F2937">
-          PACE 1.2 任务卡标准化融合演进
+          PACE 任务卡标准化融合演进
         </text>
         
         {/* 底部说明 */}

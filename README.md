@@ -4,7 +4,7 @@
 
 ## 📖 关于
 
-这是 [PACE 1.2 方法论](https://github.com/pace-eng/pace) 的官方网站，基于 Next.js 构建。网站提供了完整的方法论文档、实施指南、最佳实践和案例研究。
+这是 [PACE 方法论](https://github.com/pace-eng/pace) 的官方网站，基于 Next.js 构建。网站提供了完整的方法论文档、实施指南、最佳实践和案例研究。
 
 ## 🌐 访问地址
 

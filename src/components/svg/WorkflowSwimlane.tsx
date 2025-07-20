@@ -12,7 +12,7 @@ export default function WorkflowSwimlane({ className = '' }: WorkflowSwimlanePro
   return (
     <div className={`w-full ${className}`}>
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-2">PACE 1.2 完整工作流程</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-2">PACE完整工作流程</h2>
         <p className="text-gray-600">从想法到代码的系统化协作流程</p>
       </div>
 
@@ -115,7 +115,7 @@ export default function WorkflowSwimlane({ className = '' }: WorkflowSwimlanePro
               {/* 模式选择决策点 */}
               <polygon points="700,130 740,110 780,130 740,150" fill="#F59E0B" className="cursor-pointer"
                        onClick={() => setActivePhase('mode-select')} />
-              <text x="740" y="135" textAnchor="middle" className="text-xs font-medium fill-white">模式选择</text>
+              <text x="740" y="133" textAnchor="middle" className="text-xs font-medium fill-white">模式选择</text>
 
               {/* 标准化模式路径 */}
               <rect x="680" y="180" width="120" height="50" rx="8" fill="#10B981" className="cursor-pointer"
@@ -152,9 +152,9 @@ export default function WorkflowSwimlane({ className = '' }: WorkflowSwimlanePro
               <text x="1120" y="165" textAnchor="middle" className="text-sm font-medium fill-white">验证</text>
 
               {/* 路径连接线 */}
-              <path d="M 800 95 L 840 95 L 840 160" stroke="#6366F1" strokeWidth="2" 
+              <path d="M 800 95 L 820 95 L 820 160 L 840 160" stroke="#6366F1" strokeWidth="2" 
                     fill="none" markerEnd="url(#arrowhead)" />
-              <path d="M 800 205 L 840 205 L 840 160" stroke="#10B981" strokeWidth="2" 
+              <path d="M 800 205 L 820 205 L 820 160 L 840 160" stroke="#10B981" strokeWidth="2" 
                     fill="none" markerEnd="url(#arrowhead)" />
               <path d="M 920 160 L 960 160 L 960 280" stroke="#6B7280" strokeWidth="2" 
                     fill="none" markerEnd="url(#arrowhead)" />
@@ -167,10 +167,10 @@ export default function WorkflowSwimlane({ className = '' }: WorkflowSwimlanePro
                     strokeDasharray="5,5" />
 
               {/* 标准化增强标识 */}
-              <circle cx="670" cy="205" r="12" fill="#FBBF24" />
-              <text x="670" y="210" textAnchor="middle" className="text-xs font-bold fill-white">✓</text>
-              <text x="630" y="235" className="text-xs fill-gray-600">EARS语法</text>
-              <text x="630" y="250" className="text-xs fill-gray-600">三文档结构</text>
+              <circle cx="600" cy="225" r="12" fill="#FBBF24" />
+              <text x="600" y="230" textAnchor="middle" className="text-xs font-bold fill-white">✓</text>
+              <text x="540" y="250" className="text-xs fill-gray-600">EARS语法</text>
+              <text x="540" y="265" className="text-xs fill-gray-600">三文档结构</text>
             </g>
 
             {/* 协作指示器 */}

@@ -7,33 +7,33 @@ interface PaceConceptDiagramProps {
 }
 
 export default function PaceConceptDiagram({ className = '' }: PaceConceptDiagramProps) {
-  const [activeSection, setActiveSection] = useState<string | null>('programmatic');
+  const [activeSection, setActiveSection] = useState<string | null>('prompting');
 
   const concepts = [
     {
-      id: 'programmatic',
+      id: 'prompting',
       letter: 'P',
-      title: 'Programmatic',
-      subtitle: '程序化',
-      description: '强调系统化、结构化的工程方法，通过明确的流程、规范和工具来管理复杂的开发过程',
+      title: 'Prompting',
+      subtitle: '提示工程',
+      description: '上下文工程的核心，通过精准的提示设计和注意力管理，确俚AI理解和执行复杂任务',
       color: '#3B82F6',
       icon: 'M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4'
     },
     {
-      id: 'ai',
+      id: 'architecture',
       letter: 'A',
-      title: 'AI Collaboration',
-      subtitle: 'AI协作',
-      description: '突出人类工程师与AI系统之间的深度协作，而非简单的工具使用关系',
+      title: 'Architecture',
+      subtitle: '架构化',
+      description: 'Spec-Writing的核心，将需求转化为可执行的规范文档，建立系统化的架构约束和设计模式',
       color: '#8B5CF6',
-      icon: 'M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z'
+      icon: 'M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10'
     },
     {
       id: 'collaboration',
       letter: 'C',
       title: 'Collaboration',
-      subtitle: '协作',
-      description: '建立人类创造力与AI执行力完美结合的协作模式',
+      subtitle: '协作化',
+      description: '人机AI协作的最优化，建立人类创造力、判断力与AI执行力、计算力的完美分工和深度融合',
       color: '#10B981',
       icon: 'M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z'
     },
@@ -220,7 +220,7 @@ export default function PaceConceptDiagram({ className = '' }: PaceConceptDiagra
       {/* 底部概念总结 */}
       <div className="mt-12 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-6">
         <h3 className="text-lg font-semibold text-gray-900 mb-4 text-center">
-          PACE = Programmatic AI Collaboration Engineering
+          PACE = Prompting Architecture Collaboration Engineering
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
           {concepts.map((concept) => (

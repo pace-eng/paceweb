@@ -9,14 +9,14 @@ export default function ContactPage() {
             联系我们
           </h1>
           <p className="text-xl text-gray-600">
-            与 PACE 1.0 团队建立联系
+            与 PACE 团队建立联系
           </p>
         </div>
 
         <div className="prose prose-lg max-w-none">
           <h2>参与社区</h2>
           <p>
-            PACE 1.0 是一个开放的方法论，我们欢迎更多的开发者和团队参与到这个项目中来，共同完善和发展这套协作体系。
+            PACE 是一个开放的方法论，我们欢迎更多的开发者和团队参与到这个项目中来，共同完善和发展这套协作体系。
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
@@ -52,19 +52,19 @@ export default function ContactPage() {
             <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
               <h4 className="font-semibold text-blue-900">分享实践经验</h4>
               <p className="text-blue-700">
-                将你在PACE 1.0实施过程中的经验和案例分享给社区
+                将你在PACE 实施过程中的经验和案例分享给社区
               </p>
             </div>
             <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
               <h4 className="font-semibold text-green-900">完善文档</h4>
               <p className="text-green-700">
-                帮助改进和完善PACE 1.0的文档和指南
+                帮助改进和完善PACE的文档和指南
               </p>
             </div>
             <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-500">
               <h4 className="font-semibold text-purple-900">开发工具</h4>
               <p className="text-purple-700">
-                开发支持PACE 1.0工作流的工具和插件
+                开发支持PACE 工作流的工具和插件
               </p>
             </div>
           </div>
@@ -82,7 +82,7 @@ export default function ContactPage() {
           <div className="bg-yellow-50 p-6 rounded-lg my-8 border-l-4 border-yellow-500">
             <h3 className="text-lg font-semibold text-yellow-900 mb-3">企业合作</h3>
             <p className="text-yellow-800">
-              如果你的团队希望获得PACE 1.0的专业培训、咨询服务或定制化解决方案，
+              如果你的团队希望获得PACE 的专业培训、咨询服务或定制化解决方案，
               请通过邮箱联系我们，我们将为你提供专业的支持。
             </p>
           </div>

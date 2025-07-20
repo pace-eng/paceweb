@@ -6,7 +6,7 @@ export default function AboutPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            关于 PACE 1.0
+            关于 PACE 
           </h1>
           <p className="text-xl text-gray-600">
             了解 PACE 方法论的发展历程和愿景
@@ -16,8 +16,8 @@ export default function AboutPage() {
         <div className="prose prose-lg max-w-none">
           <h2>方法论起源</h2>
           <p>
-            PACE 1.0方法论诞生于软件工程领域对AI协作实践的深度思考。随着大型语言模型技术的快速发展，
-            传统的软件开发方法论已经无法满足AI时代的需求。PACE 1.0应运而生，
+            PACE 方法论诞生于软件工程领域对AI协作实践的深度思考。随着大型语言模型技术的快速发展，
+            传统的软件开发方法论已经无法满足AI时代的需求。PACE 应运而生，
             旨在建立一套系统化、可持续的人机协作开发体系。
           </p>
 
@@ -81,7 +81,7 @@ export default function AboutPage() {
             <div className="bg-purple-50 p-4 rounded-lg border border-purple-200">
               <h3 className="text-lg font-semibold text-purple-800">2025年 - 正式发布</h3>
               <p className="text-purple-700 text-sm mt-1">
-                发布PACE 1.0正式版本，建立官方网站和社区，
+                发布PACE 正式版本，建立官方网站和社区，
                 开始向更广泛的开发者群体推广。
               </p>
             </div>
@@ -119,14 +119,14 @@ export default function AboutPage() {
 
           <h2>社区生态</h2>
           <p>
-            PACE 1.0致力于建设一个开放、包容、互助的开发者社区，
+            PACE 致力于建设一个开放、包容、互助的开发者社区，
             通过知识分享、经验交流、工具开发等方式，共同推动方法论的发展。
           </p>
 
           <h3>参与方式</h3>
           <ul>
-            <li><strong>实践分享</strong>：分享您的PACE 1.0实施经验和案例</li>
-            <li><strong>工具贡献</strong>：开发和分享支持PACE 1.0的工具和插件</li>
+            <li><strong>实践分享</strong>：分享您的PACE 实施经验和案例</li>
+            <li><strong>工具贡献</strong>：开发和分享支持PACE 的工具和插件</li>
             <li><strong>文档完善</strong>：帮助改进和翻译方法论文档</li>
             <li><strong>开源贡献</strong>：在 <a href="https://github.com/pace-eng/pace" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">GitHub</a> 上提交代码和改进</li>
             <li><strong>社区建设</strong>：参与 <a href="https://github.com/pace-eng/pace/discussions" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">GitHub 讨论</a> 和线下聚会</li>

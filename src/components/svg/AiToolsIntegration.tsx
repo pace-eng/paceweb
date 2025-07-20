@@ -162,7 +162,7 @@ const AiToolsIntegration: React.FC = () => {
 
         {/* 顶部标题 */}
         <text x="600" y="50" textAnchor="middle" className="text-xl font-bold" fill="#1F2937">
-          PACE 1.2 AI工具协作架构
+          PACE AI工具协作架构
         </text>
         
         <text x="600" y="80" textAnchor="middle" className="text-sm" fill="#6B7280">

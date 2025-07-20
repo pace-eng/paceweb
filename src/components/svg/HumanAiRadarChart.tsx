@@ -10,16 +10,16 @@ export default function HumanAiRadarChart({ className = '' }: HumanAiRadarChartP
   const [activeEntity, setActiveEntity] = useState<'human' | 'ai' | null>(null);
 
   const abilities = [
-    { name: '创造性思维', human: 95, ai: 20, angle: 0 },
-    { name: '模式识别', human: 40, ai: 95, angle: 60 },
-    { name: '数据处理', human: 30, ai: 98, angle: 120 },
-    { name: '执行速度', human: 35, ai: 90, angle: 180 },
-    { name: '重复性工作', human: 25, ai: 98, angle: 240 },
-    { name: '直觉洞察', human: 80, ai: 20, angle: 300 }
+    { name: '提示设计', human: 90, ai: 25, angle: 0 },
+    { name: '代码执行', human: 35, ai: 95, angle: 60 },
+    { name: '模式识别', human: 40, ai: 90, angle: 120 },
+    { name: '架构规划', human: 85, ai: 30, angle: 180 },
+    { name: '上下文管理', human: 65, ai: 70, angle: 240 },
+    { name: '质量判断', human: 80, ai: 35, angle: 300 }
   ];
 
   const center = { x: 400, y: 400 };
-  const radius = 300;
+  const radius = 250;
 
   // 计算点的坐标
   const calculatePoint = (angle: number, value: number) => {
@@ -50,7 +50,7 @@ export default function HumanAiRadarChart({ className = '' }: HumanAiRadarChartP
     <div className={`w-full ${className}`}>
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-gray-900 mb-2">人机协作能力对比</h2>
-        <p className="text-gray-600">探索人类与AI各自的优势领域</p>
+        <p className="text-gray-600">基于PACE方法论的人机能力优势分析</p>
       </div>
 
       <div className="flex flex-col lg:flex-row items-center justify-center gap-8">
@@ -58,7 +58,7 @@ export default function HumanAiRadarChart({ className = '' }: HumanAiRadarChartP
         <div className="flex-1 lg:flex-[3]">
           <svg
             viewBox="0 0 800 800"
-            className="w-full max-w-2xl h-auto"
+            className="w-full max-w-3xl h-auto mx-auto"
             xmlns="http://www.w3.org/2000/svg"
           >
             {/* 背景网格 */}
@@ -91,11 +91,11 @@ export default function HumanAiRadarChart({ className = '' }: HumanAiRadarChartP
             </g>
 
             {/* 刻度标签 */}
-            <g className="text-base fill-gray-500">
+            <g className="text-sm fill-gray-500">
               {[20, 40, 60, 80, 100].map((value, index) => (
                 <text
                   key={index}
-                  x={center.x + 12}
+                  x={center.x + 8}
                   y={center.y - (radius * value / 100)}
                   textAnchor="start"
                   alignmentBaseline="middle"
@@ -133,13 +133,20 @@ export default function HumanAiRadarChart({ className = '' }: HumanAiRadarChartP
 
             {/* 能力标签 */}
             {abilities.map((ability, index) => {
-              const labelPoint = calculatePoint(ability.angle, 115);
-              // 根据角度调整文本对齐方式
+              const labelPoint = calculatePoint(ability.angle, 135);
+              // 根据角度调整文本对齐方式和位置
               const getTextAnchor = (angle: number) => {
-                if (angle >= 45 && angle <= 135) return 'middle';
-                if (angle > 135 && angle < 225) return 'end';
-                if (angle >= 225 && angle <= 315) return 'middle';
+                if (angle >= 30 && angle <= 150) return 'middle';
+                if (angle > 150 && angle < 210) return 'end';
+                if (angle >= 210 && angle <= 330) return 'middle';
                 return 'start';
+              };
+              
+              const getAlignmentBaseline = (angle: number) => {
+                if (angle >= 315 || angle <= 45) return 'middle';
+                if (angle > 45 && angle < 135) return 'text-after-edge';
+                if (angle >= 135 && angle <= 225) return 'middle';
+                return 'text-before-edge';
               };
               
               return (
@@ -148,8 +155,8 @@ export default function HumanAiRadarChart({ className = '' }: HumanAiRadarChartP
                   x={labelPoint.x}
                   y={labelPoint.y}
                   textAnchor={getTextAnchor(ability.angle)}
-                  alignmentBaseline="middle"
-                  className="text-lg fill-gray-700 font-bold"
+                  alignmentBaseline={getAlignmentBaseline(ability.angle)}
+                  className="text-base fill-gray-700 font-semibold"
                 >
                   {ability.name}
                 </text>
@@ -182,7 +189,7 @@ export default function HumanAiRadarChart({ className = '' }: HumanAiRadarChartP
                 <div className="w-4 h-4 bg-blue-500 rounded-full mr-3"></div>
                 <div>
                   <div className="font-medium text-gray-900">人类能力</div>
-                  <div className="text-sm text-gray-600">创造性思维、复杂决策、价值判断</div>
+                  <div className="text-sm text-gray-600">提示设计、架构规划、质量判断</div>
                 </div>
               </div>
               
@@ -196,7 +203,7 @@ export default function HumanAiRadarChart({ className = '' }: HumanAiRadarChartP
                 <div className="w-4 h-4 bg-purple-500 rounded-full mr-3"></div>
                 <div>
                   <div className="font-medium text-gray-900">AI 能力</div>
-                  <div className="text-sm text-gray-600">模式识别、数据处理、执行速度</div>
+                  <div className="text-sm text-gray-600">代码执行、模式识别、高速处理</div>
                 </div>
               </div>
             </div>
@@ -206,9 +213,9 @@ export default function HumanAiRadarChart({ className = '' }: HumanAiRadarChartP
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-6">
             <h3 className="text-lg font-semibold text-gray-900 mb-3">核心洞察</h3>
             <div className="space-y-2 text-sm text-gray-700">
-              <p>• <strong>互补性：</strong>人类和AI具有高度互补的能力特征</p>
-              <p>• <strong>协作区域：</strong>在复杂问题解决中需要深度协作</p>
-              <p>• <strong>最优分工：</strong>让每一方专注于自己的优势领域</p>
+              <p>• <strong>双核心互补：</strong>人类擅长Spec-Writing，AI擅长代码执行</p>
+              <p>• <strong>协作关键：</strong>上下文管理需要人机深度配合</p>
+              <p>• <strong>PACE优势：</strong>通过规范化实现最优人机分工</p>
             </div>
           </div>
 
@@ -220,21 +227,21 @@ export default function HumanAiRadarChart({ className = '' }: HumanAiRadarChartP
                 <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3"></div>
                 <div>
                   <div className="font-medium text-gray-900">人类主导</div>
-                  <div className="text-sm text-gray-600">架构设计、需求分析、质量评估</div>
+                  <div className="text-sm text-gray-600">Spec-Writing、架构设计、质量评估</div>
                 </div>
               </div>
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3"></div>
                 <div>
                   <div className="font-medium text-gray-900">AI 主导</div>
-                  <div className="text-sm text-gray-600">代码生成、测试编写、文档整理</div>
+                  <div className="text-sm text-gray-600">Context Engineering、代码生成、测试执行</div>
                 </div>
               </div>
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3"></div>
                 <div>
                   <div className="font-medium text-gray-900">协作模式</div>
-                  <div className="text-sm text-gray-600">复杂系统设计、问题诊断、优化决策</div>
+                  <div className="text-sm text-gray-600">提示优化、规范落地、持续改进</div>
                 </div>
               </div>
             </div>

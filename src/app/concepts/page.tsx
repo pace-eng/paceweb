@@ -2,153 +2,274 @@ import Layout from '@/components/Layout';
 import Link from 'next/link';
 import ContextEngineeringFlow from '@/components/svg/ContextEngineeringFlow';
 import TaskLevelPyramid from '@/components/svg/TaskLevelPyramid';
+import PaceConceptDiagram from '@/components/svg/PaceConceptDiagram';
+import HumanAiRadarChart from '@/components/svg/HumanAiRadarChart';
+import LlmPainPoints from '@/components/svg/LlmPainPoints';
 
 export default function ConceptsPage() {
   return (
     <Layout>
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            核心概念
-          </h1>
-          <p className="text-xl text-gray-600">
-            深入理解 PACE 的关键概念和原理
-          </p>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Hero Section */}
+        <div className="relative bg-gradient-to-br from-blue-50 via-white to-green-50 -mx-4 px-4 py-20 mb-16">
+          <div className="text-center max-w-4xl mx-auto">
+            <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+              核心概念解析
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              深入理解 PACE
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+              掌握 <span className="text-blue-600 font-semibold">双核心体系</span> 和 <span className="text-green-600 font-semibold">四级分类</span> 的核心原理
+            </p>
+            <p className="text-lg text-gray-500 max-w-3xl mx-auto mb-10">
+              从AI协作挑战到系统性解决方案，全面解析PACE方法论的理论基础和实践指导
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="#dual-core" className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                双核心体系
+                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </a>
+              <a href="#challenges" className="inline-flex items-center border border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+                四大挑战
+              </a>
+            </div>
+          </div>
         </div>
 
-        <div className="prose prose-lg max-w-none">
-          <h2>PACE 双核心体系</h2>
-          <p>
-            PACE 方法论的核心是 <strong>Spec-Writing（规范化编程）</strong> 和 <strong>Context Engineering（上下文工程）</strong> 双核心体系。这两大核心技术系统性地解决了AI协作中的四大经典挑战。
-          </p>
+        {/* PACE 概念图解 */}
+        <section className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">PACE 四大核心概念</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <strong className="text-blue-600">Prompting</strong> + <strong className="text-purple-600">Architecture</strong> + <strong className="text-green-600">Collaboration</strong> + <strong className="text-orange-600">Engineering</strong>
+            </p>
+          </div>
+          
+          <div className="my-16">
+            <PaceConceptDiagram />
+          </div>
+        </section>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-8">
-            <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
-              <h3 className="text-xl font-bold text-green-900 mb-4">第一核心：Spec-Writing</h3>
-              <p className="text-green-800 mb-4">
-                规范化编程 - 将需求转化为可执行的规范文档。从一次性提示转向可沉淀、可复用的长期资产。
-              </p>
-              <ul className="text-sm text-green-700 space-y-2">
-                <li>• EARS语法标准化需求表达</li>
-                <li>• 三文档架构(requirements/design/tasks)</li>
-                <li>• Level 1-4分级规范模板</li>
-                <li>• 消除&ldquo;优雅幻觉&rdquo;和&ldquo;想当然&rdquo;</li>
-              </ul>
-            </div>
-
-            <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
-              <h3 className="text-xl font-bold text-blue-900 mb-4">第二核心：Context Engineering</h3>
-              <p className="text-blue-800 mb-4">
-                上下文工程 - 精准管理AI的注意力资源，确保规范被准确理解和执行。
-              </p>
-              <ul className="text-sm text-blue-700 space-y-2">
-                <li>• 三明治提示法管理注意力</li>
-                <li>• 结构化标记划分信息层次</li>
-                <li>• RAG记忆系统解决&ldquo;失忆&rdquo;</li>
-                <li>• 防止&ldquo;上下文失焦&rdquo;</li>
-              </ul>
-            </div>
+        {/* 双核心体系 */}
+        <section id="dual-core" className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">双核心技术体系</h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              PACE 建立在两大核心技术之上：<span className="text-green-600 font-semibold">Spec-Writing（规范化编程）</span> 和 <span className="text-blue-600 font-semibold">Context Engineering（上下文工程）</span>
+            </p>
           </div>
 
-          <h2>四大经典AI协作挑战</h2>
-          <p>
-            双核心体系的设计源于对AI协作中四大经典挑战的深度分析。这些问题的根源在于LLM的本质特性：它是一个基于概率的序列预测引擎，与软件工程所需的确定性、状态感知存在根本性冲突。
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-            <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-500">
-              <h4 className="font-semibold text-red-900 mb-3">致命&ldquo;想当然&rdquo;</h4>
-              <p className="text-sm text-red-700 mb-2">
-                <strong>场景：</strong> 项目已使用testify测试库，AI却引入功能重叠的依赖
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <div className="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl border border-green-200 shadow-xl">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center mr-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-green-900 mb-1">第一核心：Spec-Writing</h3>
+                  <p className="text-green-700 font-medium">规范化编程</p>
+                </div>
+              </div>
+              <p className="text-green-800 mb-6 leading-relaxed">
+                将需求转化为可执行的规范文档，从一次性提示转向可沉淀、可复用的长期资产。
               </p>
-              <p className="text-sm text-red-700 mb-2">
-                <strong>根因：</strong> AI缺乏结构化感知，无法理解架构约束
-              </p>
-              <p className="text-xs text-red-600">
-                <strong>解决：</strong> 架构规范显式化 + Context Engineering
-              </p>
+              <div className="space-y-3">
+                <div className="flex items-center text-green-700">
+                  <svg className="w-4 h-4 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-sm">EARS语法标准化需求表达</span>
+                </div>
+                <div className="flex items-center text-green-700">
+                  <svg className="w-4 h-4 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-sm">三文档架构(requirements/design/tasks)</span>
+                </div>
+                <div className="flex items-center text-green-700">
+                  <svg className="w-4 h-4 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-sm">Level 1-4分级规范模板</span>
+                </div>
+                <div className="flex items-center text-green-700">
+                  <svg className="w-4 h-4 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-sm">消除&ldquo;优雅幻觉&rdquo;和&ldquo;想当然&rdquo;</span>
+                </div>
+              </div>
             </div>
-
-            <div className="bg-orange-50 p-6 rounded-lg border-l-4 border-orange-500">
-              <h4 className="font-semibold text-orange-900 mb-3">优雅的&ldquo;幻觉&rdquo;</h4>
-              <p className="text-sm text-orange-700 mb-2">
-                <strong>场景：</strong> AI使用不存在的user.email字段，代码精美却完全错误
+            
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl border border-blue-200 shadow-xl">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mr-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-blue-900 mb-1">第二核心：Context Engineering</h3>
+                  <p className="text-blue-700 font-medium">上下文工程</p>
+                </div>
+              </div>
+              <p className="text-blue-800 mb-6 leading-relaxed">
+                精准管理AI的注意力资源，确保规范被准确理解和执行。
               </p>
-              <p className="text-sm text-orange-700 mb-2">
-                <strong>根因：</strong> 概率模式匹配覆盖项目事实
-              </p>
-              <p className="text-xs text-orange-600">
-                <strong>解决：</strong> 事实规范强化 + 精准上下文注入
-              </p>
-            </div>
-
-            <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
-              <h4 className="font-semibold text-blue-900 mb-3">经常性&ldquo;失忆&rdquo;</h4>
-              <p className="text-sm text-blue-700 mb-2">
-                <strong>场景：</strong> Chat A写的UserRepository，Chat B完全忘记
-              </p>
-              <p className="text-sm text-blue-700 mb-2">
-                <strong>根因：</strong> LLM无状态本质，每次交互都是独立事务
-              </p>
-              <p className="text-xs text-blue-600">
-                <strong>解决：</strong> 外部记忆系统 + 规范文档化
-              </p>
-            </div>
-
-            <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-500">
-              <h4 className="font-semibold text-purple-900 mb-3">上下文失焦</h4>
-              <p className="text-sm text-purple-700 mb-2">
-                <strong>场景：</strong> 一次性提供大量信息，AI被&ldquo;淹没&rdquo;忽略核心指令
-              </p>
-              <p className="text-sm text-purple-700 mb-2">
-                <strong>根因：</strong> 注意力机制的有限性和偏见
-              </p>
-              <p className="text-xs text-purple-600">
-                <strong>解决：</strong> 注意力精准管理 + 结构化上下文设计
-              </p>
+              <div className="space-y-3">
+                <div className="flex items-center text-blue-700">
+                  <svg className="w-4 h-4 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-sm">三明治提示法管理注意力</span>
+                </div>
+                <div className="flex items-center text-blue-700">
+                  <svg className="w-4 h-4 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-sm">结构化标记划分信息层次</span>
+                </div>
+                <div className="flex items-center text-blue-700">
+                  <svg className="w-4 h-4 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-sm">RAG记忆系统解决&ldquo;失忆&rdquo;</span>
+                </div>
+                <div className="flex items-center text-blue-700">
+                  <svg className="w-4 h-4 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-sm">防止&ldquo;上下文失焦&rdquo;</span>
+                </div>
+              </div>
             </div>
           </div>
+        </section>
 
-          <h2>双核心驱动的任务分级体系</h2>
-          <p>
-            基于Spec-Writing复杂度和Context Engineering需求，PACE建立了四级分类体系。每个级别都有对应的规范编写策略和上下文管理方法。
-          </p>
+        {/* 四大经典挑战 */}
+        <section id="challenges" className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">AI协作的四大经典挑战</h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              要理解双核心体系的必要性，我们必须深入分析AI协作中的典型&ldquo;翻车&rdquo;场景
+            </p>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-            <div className="bg-green-50 border-l-4 border-green-500 p-6 rounded-lg">
-              <h4 className="font-semibold text-green-900 mb-2">Level 1 - 简单规范 + 基础上下文</h4>
-              <p className="text-sm text-green-800 mb-2">AI参与度：85-95%</p>
-              <div className="text-sm text-green-700 space-y-1">
-                <p><strong>规范特征：</strong> 标准EARS语法，明确输入输出</p>
-                <p><strong>上下文需求：</strong> 基本项目信息，少量依赖关系</p>
-                <p><strong>典型任务：</strong> CRUD操作、数据转换、单元测试</p>
+          <div className="my-16">
+            <LlmPainPoints />
+          </div>
+        </section>
+
+        {/* 人机协作能力对比 */}
+        <section className="mb-20">
+          <div className="my-16">
+            <HumanAiRadarChart />
+          </div>
+        </section>
+
+        {/* 四级分类体系 */}
+        <section className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">双核心驱动的任务分级体系</h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              基于Spec-Writing复杂度和Context Engineering需求，建立四级分类体系
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl border border-green-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center mr-3">
+                  <span className="text-white font-bold text-lg">1</span>
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-green-900">Level 1 - 简单规范</h4>
+                  <p className="text-sm text-green-700">AI参与度：85-95%</p>
+                </div>
+              </div>
+              <div className="space-y-2">
+                <div className="bg-white bg-opacity-70 p-3 rounded-lg">
+                  <p className="text-xs text-green-800 font-medium mb-1">规范特征：</p>
+                  <p className="text-xs text-green-700">标准EARS语法，明确输入输出</p>
+                </div>
+                <div className="bg-white bg-opacity-70 p-3 rounded-lg">
+                  <p className="text-xs text-green-800 font-medium mb-1">典型任务：</p>
+                  <p className="text-xs text-green-700">CRUD操作、数据转换、单元测试</p>
+                </div>
               </div>
             </div>
-            <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-lg">
-              <h4 className="font-semibold text-blue-900 mb-2">Level 2 - 标准规范 + 结构化上下文</h4>
-              <p className="text-sm text-blue-800 mb-2">AI参与度：60-80%</p>
-              <div className="text-sm text-blue-700 space-y-1">
-                <p><strong>规范特征：</strong> 多模块接口规范，约束条件</p>
-                <p><strong>上下文需求：</strong> 架构信息，依赖关系图</p>
-                <p><strong>典型任务：</strong> API集成、状态管理、数据流设计</p>
+
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl border border-blue-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center mr-3">
+                  <span className="text-white font-bold text-lg">2</span>
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-blue-900">Level 2 - 标准规范</h4>
+                  <p className="text-sm text-blue-700">AI参与度：60-80%</p>
+                </div>
+              </div>
+              <div className="space-y-2">
+                <div className="bg-white bg-opacity-70 p-3 rounded-lg">
+                  <p className="text-xs text-blue-800 font-medium mb-1">规范特征：</p>
+                  <p className="text-xs text-blue-700">多模块接口规范，约束条件</p>
+                </div>
+                <div className="bg-white bg-opacity-70 p-3 rounded-lg">
+                  <p className="text-xs text-blue-800 font-medium mb-1">典型任务：</p>
+                  <p className="text-xs text-blue-700">API集成、状态管理、数据流设计</p>
+                </div>
               </div>
             </div>
-            <div className="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-lg">
-              <h4 className="font-semibold text-orange-900 mb-2">Level 3 - 复杂规范 + 深度上下文工程</h4>
-              <p className="text-sm text-orange-800 mb-2">AI参与度：30-50%</p>
-              <div className="text-sm text-orange-700 space-y-1">
-                <p><strong>规范特征：</strong> 多维度约束，权衡决策规范</p>
-                <p><strong>上下文需求：</strong> 完整架构文档，历史决策记录</p>
-                <p><strong>典型任务：</strong> 系统架构、性能优化、技术选型</p>
+
+            <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-xl border border-orange-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center mr-3">
+                  <span className="text-white font-bold text-lg">3</span>
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-orange-900">Level 3 - 复杂规范</h4>
+                  <p className="text-sm text-orange-700">AI参与度：30-50%</p>
+                </div>
+              </div>
+              <div className="space-y-2">
+                <div className="bg-white bg-opacity-70 p-3 rounded-lg">
+                  <p className="text-xs text-orange-800 font-medium mb-1">规范特征：</p>
+                  <p className="text-xs text-orange-700">多维度约束，权衡决策规范</p>
+                </div>
+                <div className="bg-white bg-opacity-70 p-3 rounded-lg">
+                  <p className="text-xs text-orange-800 font-medium mb-1">典型任务：</p>
+                  <p className="text-xs text-orange-700">系统架构、性能优化、技术选型</p>
+                </div>
               </div>
             </div>
-            <div className="bg-purple-50 border-l-4 border-purple-500 p-6 rounded-lg">
-              <h4 className="font-semibold text-purple-900 mb-2">Level 4 - 动态规范 + 自适应上下文</h4>
-              <p className="text-sm text-purple-800 mb-2">AI参与度：10-30%</p>
-              <div className="text-sm text-purple-700 space-y-1">
-                <p><strong>规范特征：</strong> 探索性规范，迭代演进</p>
-                <p><strong>上下文需求：</strong> 动态更新，实验反馈循环</p>
-                <p><strong>典型任务：</strong> 新技术验证、算法创新、架构重构</p>
+
+            <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl border border-purple-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center mr-3">
+                  <span className="text-white font-bold text-lg">4</span>
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-purple-900">Level 4 - 动态规范</h4>
+                  <p className="text-sm text-purple-700">AI参与度：10-30%</p>
+                </div>
+              </div>
+              <div className="space-y-2">
+                <div className="bg-white bg-opacity-70 p-3 rounded-lg">
+                  <p className="text-xs text-purple-800 font-medium mb-1">规范特征：</p>
+                  <p className="text-xs text-purple-700">探索性规范，迭代演进</p>
+                </div>
+                <div className="bg-white bg-opacity-70 p-3 rounded-lg">
+                  <p className="text-xs text-purple-800 font-medium mb-1">典型任务：</p>
+                  <p className="text-xs text-purple-700">新技术验证、算法创新、架构重构</p>
+                </div>
               </div>
             </div>
           </div>
@@ -157,56 +278,138 @@ export default function ConceptsPage() {
           <div className="my-16">
             <TaskLevelPyramid />
           </div>
+        </section>
 
-          <h2>垂直切片策略</h2>
-          <p>
-            垂直切片是PACE的核心工作模式，它摒弃了传统的瀑布式开发阶段，转而采用迭代策略，专注于从第一天起就交付价值。
-          </p>
-
-          <h3>垂直切片的四个特征</h3>
-          <ul>
-            <li><strong>功能完整性</strong>：每个切片都是一个可独立交付的功能单元</li>
-            <li><strong>端到端覆盖</strong>：从用户界面到数据存储的完整技术栈</li>
-            <li><strong>价值导向</strong>：每个切片都能为用户创造可感知的价值</li>
-            <li><strong>风险分散</strong>：通过小粒度迭代降低项目风险</li>
-          </ul>
-
-          <div className="bg-green-50 p-6 rounded-lg my-8 border-l-4 border-green-500">
-            <h3 className="text-lg font-semibold text-green-900 mb-3">切片演进示例</h3>
-            <p className="text-green-700 mb-4">
-              我们不试图一次性造出一辆完美的汽车，而是通过构建一系列功能上持续完善、但始终可用的产品来逐步实现目标：
+        {/* 垂直切片策略 */}
+        <section className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">垂直切片策略</h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              摒弃传统瀑布式开发，采用迭代策略，从第一天起就交付价值
             </p>
-            <div className="flex flex-wrap gap-2">
-              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">滑板</span>
-              <span className="text-green-600">→</span>
-              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">踏板车</span>
-              <span className="text-green-600">→</span>
-              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">自行车</span>
-              <span className="text-green-600">→</span>
-              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">汽车</span>
-            </div>
           </div>
 
-          <h2>Context Engineering 核心要素</h2>
-          <p>
-            Context Engineering 不仅仅是信息传递，更是一门设计和构建动态系统的学科，能够在正确的时间，以正确的格式，为AI提供恰当的信息和工具。
-          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-200">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">垂直切片的四个特征</h3>
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">功能完整性</h4>
+                    <p className="text-sm text-gray-600">每个切片都是一个可独立交付的功能单元</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">端到端覆盖</h4>
+                    <p className="text-sm text-gray-600">从用户界面到数据存储的完整技术栈</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">价值导向</h4>
+                    <p className="text-sm text-gray-600">每个切片都能为用户创造可感知的价值</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">风险分散</h4>
+                    <p className="text-sm text-gray-600">通过小粒度迭代降低项目风险</p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
-            <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
-              <h4 className="font-semibold text-blue-900 mb-2">信息的结构化组织</h4>
+            <div className="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl border border-green-200 shadow-xl">
+              <h3 className="text-2xl font-bold text-green-900 mb-6">切片演进示例</h3>
+              <p className="text-green-700 mb-6">
+                我们不试图一次性造出一辆完美的汽车，而是通过构建一系列功能上持续完善、但始终可用的产品来逐步实现目标：
+              </p>
+              <div className="flex flex-col space-y-4">
+                <div className="flex items-center">
+                  <span className="bg-green-200 text-green-900 px-4 py-2 rounded-full text-sm font-medium">滑板</span>
+                  <div className="flex-1 mx-4 h-px bg-green-300"></div>
+                  <span className="text-green-600 text-sm">基础移动</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="bg-green-300 text-green-900 px-4 py-2 rounded-full text-sm font-medium">踏板车</span>
+                  <div className="flex-1 mx-4 h-px bg-green-300"></div>
+                  <span className="text-green-600 text-sm">操控改进</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="bg-green-400 text-white px-4 py-2 rounded-full text-sm font-medium">自行车</span>
+                  <div className="flex-1 mx-4 h-px bg-green-300"></div>
+                  <span className="text-green-600 text-sm">效率提升</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="bg-green-600 text-white px-4 py-2 rounded-full text-sm font-medium">汽车</span>
+                  <div className="flex-1 mx-4 h-px bg-green-300"></div>
+                  <span className="text-green-600 text-sm">完整体验</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Context Engineering 核心要素 */}
+        <section className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Context Engineering 核心要素</h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              不仅仅是信息传递，更是一门设计和构建动态系统的学科
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl border border-blue-200 shadow-lg">
+              <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+                </svg>
+              </div>
+              <h4 className="text-lg font-bold text-blue-900 mb-3">信息的结构化组织</h4>
               <p className="text-sm text-blue-700">
                 将复杂的业务需求转化为AI可理解的结构化描述
               </p>
             </div>
-            <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-500">
-              <h4 className="font-semibold text-purple-900 mb-2">认知负荷的管理</h4>
+            <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl border border-purple-200 shadow-lg">
+              <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h4 className="text-lg font-bold text-purple-900 mb-3">认知负荷的管理</h4>
               <p className="text-sm text-purple-700">
                 在有限的上下文窗口内传递最关键的信息
               </p>
             </div>
-            <div className="bg-orange-50 p-6 rounded-lg border-l-4 border-orange-500">
-              <h4 className="font-semibold text-orange-900 mb-2">意图的精确传达</h4>
+            <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-xl border border-orange-200 shadow-lg">
+              <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h4 className="text-lg font-bold text-orange-900 mb-3">意图的精确传达</h4>
               <p className="text-sm text-orange-700">
                 确保AI理解人类的真实意图而非表面需求
               </p>
@@ -217,98 +420,162 @@ export default function ConceptsPage() {
           <div className="my-16">
             <ContextEngineeringFlow />
           </div>
+        </section>
 
-          <h2>标准化实践融合</h2>
-          <p>
-            PACE 融合了业界优秀的标准化实践，为团队提供开箱即用的体验，同时保持核心灵活性。
-          </p>
+        {/* 标准化实践融合 */}
+        <section className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">标准化实践融合</h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              PACE 融合了业界优秀的标准化实践，为团队提供开箱即用的体验
+            </p>
+          </div>
 
-          <h3>EARS语法集成</h3>
-          <p>
-            EARS (Easy Approach to Requirements Syntax) 语法通过结构化的自然语言模式，显著减少需求歧义，提升AI理解准确性。
-          </p>
-          
-          <div className="bg-blue-50 p-6 rounded-lg my-8 border-l-4 border-blue-500">
-            <h4 className="font-semibold text-blue-900 mb-3">EARS语法核心模式</h4>
-            <ul className="space-y-2 text-blue-700">
-              <li><strong>通用需求</strong>：系统应当...</li>
-              <li><strong>事件驱动需求</strong>：当...发生时，系统应当...</li>
-              <li><strong>状态驱动需求</strong>：当系统处于...状态时，应当...</li>
-              <li><strong>可选特性需求</strong>：如果...，则系统应当...</li>
-              <li><strong>复杂需求</strong>：如果...，当...时，系统应当...</li>
-            </ul>
-            <div className="mt-4 pt-4 border-t border-blue-200">
-              <Link href="/ears" className="text-blue-600 hover:text-blue-800 hover:underline font-medium">
-                查看完整的 EARS 语法指南 →
-              </Link>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            {/* EARS语法 */}
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl border border-blue-200 shadow-xl">
+              <h3 className="text-2xl font-bold text-blue-900 mb-6">EARS语法集成</h3>
+              <p className="text-blue-800 mb-6">
+                通过结构化的自然语言模式，显著减少需求歧义，提升AI理解准确性
+              </p>
+              <div className="space-y-3">
+                <div className="bg-white bg-opacity-70 p-3 rounded-lg">
+                  <span className="text-blue-900 font-semibold">通用需求：</span>
+                  <span className="text-blue-700">系统应当...</span>
+                </div>
+                <div className="bg-white bg-opacity-70 p-3 rounded-lg">
+                  <span className="text-blue-900 font-semibold">事件驱动：</span>
+                  <span className="text-blue-700">当...发生时，系统应当...</span>
+                </div>
+                <div className="bg-white bg-opacity-70 p-3 rounded-lg">
+                  <span className="text-blue-900 font-semibold">状态驱动：</span>
+                  <span className="text-blue-700">当系统处于...状态时，应当...</span>
+                </div>
+              </div>
+              <div className="mt-6 pt-4 border-t border-blue-200">
+                <Link href="/ears" className="text-blue-600 hover:text-blue-800 hover:underline font-medium">
+                  查看完整的 EARS 语法指南 →
+                </Link>
+              </div>
+            </div>
+
+            {/* 三文档架构 */}
+            <div className="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl border border-green-200 shadow-xl">
+              <h3 className="text-2xl font-bold text-green-900 mb-6">三文档架构融合</h3>
+              <p className="text-green-800 mb-6">
+                通过观察Kiro等工具的成功实践，与引用式任务卡完美融合
+              </p>
+              <div className="space-y-4">
+                <div className="bg-white bg-opacity-70 p-4 rounded-lg border-l-4 border-green-500">
+                  <h4 className="font-semibold text-green-900">requirements.md</h4>
+                  <p className="text-sm text-green-700 mt-1">使用EARS语法的结构化需求描述</p>
+                </div>
+                <div className="bg-white bg-opacity-70 p-4 rounded-lg border-l-4 border-purple-500">
+                  <h4 className="font-semibold text-purple-900">design.md</h4>
+                  <p className="text-sm text-purple-700 mt-1">技术架构和设计决策文档</p>
+                </div>
+                <div className="bg-white bg-opacity-70 p-4 rounded-lg border-l-4 border-orange-500">
+                  <h4 className="font-semibold text-orange-900">tasks.md</h4>
+                  <p className="text-sm text-orange-700 mt-1">具体实现任务的分解</p>
+                </div>
+              </div>
             </div>
           </div>
 
-          <h3>三文档架构融合</h3>
-          <p>
-            通过观察Kiro等工具的成功实践，PACE支持三文档架构模式，与引用式任务卡完美融合。
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
-            <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
-              <h4 className="font-semibold text-green-900">requirements.md</h4>
-              <p className="text-sm text-green-700 mt-2">使用EARS语法的结构化需求描述</p>
+          {/* 双模式操作框架 */}
+          <div className="bg-gradient-to-r from-orange-50 to-yellow-50 p-8 rounded-2xl border border-orange-200 shadow-lg">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">双模式操作框架</h3>
+              <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+                支持超级个体模式和团队协作模式的灵活切换，满足不同场景需求
+              </p>
             </div>
-            <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
-              <h4 className="font-semibold text-purple-900">design.md</h4>
-              <p className="text-sm text-purple-700 mt-2">技术架构和设计决策文档</p>
-            </div>
-            <div className="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-500">
-              <h4 className="font-semibold text-orange-900">tasks.md</h4>
-              <p className="text-sm text-orange-700 mt-2">具体实现任务的分解</p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div className="bg-white p-6 rounded-xl border-l-4 border-indigo-400 shadow-md">
+                <h4 className="text-lg font-bold text-indigo-800 mb-4">超级个体模式</h4>
+                <div className="space-y-2">
+                  <div className="flex items-center text-indigo-700">
+                    <span className="w-2 h-2 bg-indigo-400 rounded-full mr-3 flex-shrink-0"></span>
+                    <span className="text-sm">个人项目、原型开发</span>
+                  </div>
+                  <div className="flex items-center text-indigo-700">
+                    <span className="w-2 h-2 bg-indigo-400 rounded-full mr-3 flex-shrink-0"></span>
+                    <span className="text-sm">灵活性优先，快速迭代</span>
+                  </div>
+                  <div className="flex items-center text-indigo-700">
+                    <span className="w-2 h-2 bg-indigo-400 rounded-full mr-3 flex-shrink-0"></span>
+                    <span className="text-sm">简化任务卡模板</span>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-white p-6 rounded-xl border-l-4 border-teal-400 shadow-md">
+                <h4 className="text-lg font-bold text-teal-800 mb-4">团队协作模式</h4>
+                <div className="space-y-2">
+                  <div className="flex items-center text-teal-700">
+                    <span className="w-2 h-2 bg-teal-400 rounded-full mr-3 flex-shrink-0"></span>
+                    <span className="text-sm">生产项目、长期维护</span>
+                  </div>
+                  <div className="flex items-center text-teal-700">
+                    <span className="w-2 h-2 bg-teal-400 rounded-full mr-3 flex-shrink-0"></span>
+                    <span className="text-sm">一致性优先，标准化流程</span>
+                  </div>
+                  <div className="flex items-center text-teal-700">
+                    <span className="w-2 h-2 bg-teal-400 rounded-full mr-3 flex-shrink-0"></span>
+                    <span className="text-sm">完整标准化模板</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+        </section>
 
-          <h3>双模式操作框架</h3>
-          <p>
-            PACE 支持超级个体模式和团队协作模式的灵活切换，满足不同场景需求。
+        {/* CTA Section */}
+        <section className="bg-gradient-to-r from-gray-900 to-blue-900 text-white rounded-2xl p-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+            深入学习 PACE 核心概念
+          </h2>
+          <p className="text-xl mb-8 text-gray-200 max-w-3xl mx-auto">
+            掌握理论基础，开始实践之旅
           </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-            <div className="bg-indigo-50 p-6 rounded-lg border border-indigo-200">
-              <h4 className="font-semibold text-indigo-900 mb-3">超级个体模式</h4>
-              <ul className="text-sm text-indigo-700 space-y-1">
-                <li>• 个人项目、原型开发</li>
-                <li>• 灵活性优先，快速迭代</li>
-                <li>• 简化任务卡模板</li>
-                <li>• 个人偏好配置</li>
-              </ul>
-            </div>
-            <div className="bg-teal-50 p-6 rounded-lg border border-teal-200">
-              <h4 className="font-semibold text-teal-900 mb-3">团队协作模式</h4>
-              <ul className="text-sm text-teal-700 space-y-1">
-                <li>• 生产项目、长期维护</li>
-                <li>• 一致性优先，标准化流程</li>
-                <li>• 完整标准化模板</li>
-                <li>• 统一配置管理</li>
-              </ul>
-            </div>
-          </div>
-
-          <h2>下一步学习</h2>
-          <p>
-            理解了核心概念后，建议继续学习：
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-            <Link href="/ears" className="block p-4 bg-purple-50 hover:bg-purple-100 rounded-lg transition-colors border-l-4 border-purple-500">
-              <h4 className="font-semibold text-purple-900">EARS 语法</h4>
-              <p className="text-sm text-purple-700 mt-1">掌握结构化需求表达方法</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Link
+              href="/ears"
+              className="block p-6 bg-white rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            >
+              <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+              </div>
+              <h4 className="font-bold text-gray-900 mb-2 text-lg">EARS 语法</h4>
+              <p className="text-sm text-gray-600">掌握结构化需求表达方法</p>
             </Link>
-            <Link href="/implementation" className="block p-4 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors border-l-4 border-blue-500">
-              <h4 className="font-semibold text-blue-900">实施指南</h4>
-              <p className="text-sm text-blue-700 mt-1">了解如何在项目中实施PACE</p>
+            <Link
+              href="/implementation"
+              className="block p-6 bg-white rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            >
+              <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h4 className="font-bold text-gray-900 mb-2 text-lg">实施指南</h4>
+              <p className="text-sm text-gray-600">了解如何在项目中实施PACE</p>
             </Link>
-            <Link href="/best-practices" className="block p-4 bg-green-50 hover:bg-green-100 rounded-lg transition-colors border-l-4 border-green-500">
-              <h4 className="font-semibold text-green-900">最佳实践</h4>
-              <p className="text-sm text-green-700 mt-1">学习经过验证的实践方法</p>
+            <Link
+              href="/best-practices"
+              className="block p-6 bg-white rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            >
+              <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h4 className="font-bold text-gray-900 mb-2 text-lg">最佳实践</h4>
+              <p className="text-sm text-gray-600">学习经过验证的实践方法</p>
             </Link>
           </div>
-        </div>
+        </section>
       </div>
     </Layout>
   );

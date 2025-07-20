@@ -116,7 +116,7 @@ const DualModeFramework: React.FC = () => {
 
         {/* 顶部说明 */}
         <text x="500" y="60" textAnchor="middle" className="text-lg font-semibold" fill="#374151">
-          PACE 1.2 支持不同开发模式的灵活切换
+          PACE 支持不同开发模式的灵活切换
         </text>
       </svg>
     </div>

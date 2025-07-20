@@ -73,13 +73,13 @@ export default function ImplementationPage() {
       color: 'bg-purple-500',
       activities: [
         '组织级推广：制定推广计划',
-        '平台建设：支持PACE 1.2的统一平台',
+        '平台建设：支持PACE的统一平台',
         '知识管理：最佳实践库建设',
         '模板生态：建设丰富的标准化模板库',
         '持续改进：反馈机制建立'
       ],
       outcomes: [
-        '80%以上项目采用PACE 1.2',
+        '80%以上项目采用PACE',
         '完善的知识管理体系',
         '灵活的双模式操作能力',
         '标准化与灵活性的完美平衡',
@@ -121,9 +121,9 @@ export default function ImplementationPage() {
   return (
     <Layout>
       <HeroSection
-        subtitle="PACE 1.2 方法论"
+        subtitle="PACE方法论"
         title="实施指南"
-        description="通过结构化的三阶段方法，在您的团队中成功实施PACE 1.2方法论，融合标准化实践，支持个体与团队双模式操作"
+        description="通过结构化的三阶段方法，在您的团队中成功实施PACE方法论，融合标准化实践，支持个体与团队双模式操作"
       >
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link 
@@ -229,12 +229,12 @@ export default function ImplementationPage() {
           </div>
         </div>
 
-        {/* PACE 1.2 工作流程 */}
+        {/* PACE 工作流程 */}
         <div className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">PACE 1.2 工作流程</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">PACE 工作流程</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              PACE 1.2 的核心工作流程分为两个主要阶段：蓝图规划和切片循环，融合标准化实践，增强了AI工具协作和注意力管理
+              PACE 的核心工作流程分为两个主要阶段：蓝图规划和切片循环，融合标准化实践，增强了AI工具协作和注意力管理
             </p>
           </div>
 
@@ -269,12 +269,12 @@ export default function ImplementationPage() {
           </div>
         </div>
 
-        {/* 标准化实施路径 (v1.2新增) */}
+        {/* 标准化实施路径 */}
         <div className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">标准化实施路径</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              PACE 1.2 新增的标准化实施路径，提供开箱即用的体验，同时保持核心灵活性
+              PACE新增的标准化实施路径，提供开箱即用的体验，同时保持核心灵活性
             </p>
           </div>
 
@@ -378,7 +378,7 @@ export default function ImplementationPage() {
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">双模式配置指南</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              PACE 1.2 支持个体和团队双模式操作，融合标准化实践，根据项目规模和需求灵活选择
+              PACE 支持个体和团队双模式操作，融合标准化实践，根据项目规模和需求灵活选择
             </p>
           </div>
 
@@ -452,7 +452,7 @@ export default function ImplementationPage() {
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">项目结构建议</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              为了支持PACE 1.2方法论的高效执行，融合标准化实践，建议采用以下项目结构
+              为了支持PACE方法论的高效执行，融合标准化实践，建议采用以下项目结构
             </p>
           </div>
 
@@ -460,7 +460,7 @@ export default function ImplementationPage() {
             <CardContent className="p-8">
               <div className="bg-gray-900 text-gray-100 p-6 rounded-lg font-mono text-sm overflow-x-auto">
                 <pre className="whitespace-pre">{`project-root/
-├── .pace/                          # PACE 1.2 配置目录
+├── .pace/                          # PACE 配置目录
 │   ├── memory/                    # 项目记忆库
 │   │   ├── decisions/            # 架构决策记录(ADR)
 │   │   ├── patterns/             # 代码模式和最佳实践
@@ -580,7 +580,7 @@ export default function ImplementationPage() {
 
         {/* 下一步行动 */}
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">准备开始实施PACE 1.2？</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">准备开始实施PACE？</h2>
           <p className="text-lg text-gray-600 mb-8">选择适合您的学习路径</p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
