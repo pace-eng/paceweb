@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "wrangler deploy",
+    "deploy": "wrangler pages deploy",
     "generate-favicon": "node scripts/generate-favicon.js"
   },
   "dependencies": {
