@@ -143,7 +143,7 @@ const AttentionManagement: React.FC = () => {
 
         {/* 流程说明 */}
         <text x="600" y="50" textAnchor="middle" className="text-lg font-semibold" fill="#374151">
-          PACE 1.1 注意力管理机制确保长任务执行不偏离目标
+          PACE 1.2 注意力管理机制确保长任务执行不偏离目标
         </text>
         
         {/* 底部说明 */}

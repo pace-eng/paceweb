@@ -12,7 +12,7 @@ export default function WorkflowSwimlane({ className = '' }: WorkflowSwimlanePro
   return (
     <div className={`w-full ${className}`}>
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-2">PACE 1.0 完整工作流程</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-2">PACE 1.2 完整工作流程</h2>
         <p className="text-gray-600">从想法到代码的系统化协作流程</p>
       </div>
 
@@ -65,14 +65,14 @@ export default function WorkflowSwimlane({ className = '' }: WorkflowSwimlanePro
             </g>
 
             {/* 阶段分隔线 */}
-            <line x1="650" y1="80" x2="650" y2="480" stroke="#D1D5DB" strokeWidth="2" strokeDasharray="5,5" />
+            <line x1="670" y1="80" x2="670" y2="480" stroke="#D1D5DB" strokeWidth="2" strokeDasharray="5,5" />
             
             {/* 阶段标题 */}
             <text x="350" y="70" textAnchor="middle" className="text-lg font-bold" fill="#3B82F6">
               阶段 0: 蓝图规划
             </text>
-            <text x="925" y="70" textAnchor="middle" className="text-lg font-bold" fill="#10B981">
-              阶段 1: 切片循环
+            <text x="950" y="70" textAnchor="middle" className="text-lg font-bold" fill="#10B981">
+              阶段 1: 切片循环 (标准化增强)
             </text>
 
             {/* 阶段 0 步骤 */}
@@ -110,40 +110,67 @@ export default function WorkflowSwimlane({ className = '' }: WorkflowSwimlanePro
                     fill="none" markerEnd="url(#arrowhead)" />
             </g>
 
-            {/* 阶段 1 步骤 */}
+            {/* 阶段 1 步骤 - 增强版含标准化选择 */}
             <g>
-              {/* 定义 */}
-              <rect x="700" y="130" width="80" height="60" rx="8" fill="#3B82F6" className="cursor-pointer"
-                    onClick={() => setActivePhase('define')} />
-              <text x="740" y="165" textAnchor="middle" className="text-sm font-medium fill-white">定义</text>
+              {/* 模式选择决策点 */}
+              <polygon points="700,130 740,110 780,130 740,150" fill="#F59E0B" className="cursor-pointer"
+                       onClick={() => setActivePhase('mode-select')} />
+              <text x="740" y="135" textAnchor="middle" className="text-xs font-medium fill-white">模式选择</text>
 
-              {/* 评审 */}
-              <rect x="820" y="130" width="80" height="60" rx="8" fill="#3B82F6" className="cursor-pointer"
-                    onClick={() => setActivePhase('review')} />
-              <text x="860" y="165" textAnchor="middle" className="text-sm font-medium fill-white">评审</text>
+              {/* 标准化模式路径 */}
+              <rect x="680" y="180" width="120" height="50" rx="8" fill="#10B981" className="cursor-pointer"
+                    onClick={() => setActivePhase('standard-mode')} />
+              <text x="740" y="200" textAnchor="middle" className="text-xs font-medium fill-white">标准化模式</text>
+              <text x="740" y="215" textAnchor="middle" className="text-xs font-medium fill-white">(Level 1-2)</text>
+
+              {/* 灵活模式路径 */}
+              <rect x="680" y="70" width="120" height="50" rx="8" fill="#6366F1" className="cursor-pointer"
+                    onClick={() => setActivePhase('flexible-mode')} />
+              <text x="740" y="90" textAnchor="middle" className="text-xs font-medium fill-white">灵活模式</text>
+              <text x="740" y="105" textAnchor="middle" className="text-xs font-medium fill-white">(Level 3-4)</text>
+
+              {/* 模式选择连接线 */}
+              <path d="M 740 150 L 740 180" stroke="#F59E0B" strokeWidth="2" 
+                    fill="none" markerEnd="url(#arrowhead)" />
+              <path d="M 740 130 L 740 120" stroke="#F59E0B" strokeWidth="2" 
+                    fill="none" markerEnd="url(#arrowhead)" />
+
+              {/* 任务卡创建 */}
+              <rect x="840" y="130" width="80" height="60" rx="8" fill="#3B82F6" className="cursor-pointer"
+                    onClick={() => setActivePhase('create-card')} />
+              <text x="880" y="155" textAnchor="middle" className="text-sm font-medium fill-white">创建</text>
+              <text x="880" y="170" textAnchor="middle" className="text-sm font-medium fill-white">任务卡</text>
 
               {/* 实现 */}
-              <rect x="940" y="250" width="80" height="60" rx="8" fill="#8B5CF6" className="cursor-pointer"
+              <rect x="960" y="250" width="80" height="60" rx="8" fill="#8B5CF6" className="cursor-pointer"
                     onClick={() => setActivePhase('implement')} />
-              <text x="980" y="285" textAnchor="middle" className="text-sm font-medium fill-white">实现</text>
+              <text x="1000" y="285" textAnchor="middle" className="text-sm font-medium fill-white">实现</text>
 
               {/* 验证 */}
-              <rect x="1060" y="130" width="80" height="60" rx="8" fill="#3B82F6" className="cursor-pointer"
+              <rect x="1080" y="130" width="80" height="60" rx="8" fill="#3B82F6" className="cursor-pointer"
                     onClick={() => setActivePhase('verify')} />
-              <text x="1100" y="165" textAnchor="middle" className="text-sm font-medium fill-white">验证</text>
+              <text x="1120" y="165" textAnchor="middle" className="text-sm font-medium fill-white">验证</text>
 
-              {/* 循环箭头 */}
-              <path d="M 780 160 L 820 160" stroke="#6B7280" strokeWidth="2" 
+              {/* 路径连接线 */}
+              <path d="M 800 95 L 840 95 L 840 160" stroke="#6366F1" strokeWidth="2" 
                     fill="none" markerEnd="url(#arrowhead)" />
-              <path d="M 900 160 L 940 160 L 940 280 L 940 280" stroke="#6B7280" strokeWidth="2" 
+              <path d="M 800 205 L 840 205 L 840 160" stroke="#10B981" strokeWidth="2" 
                     fill="none" markerEnd="url(#arrowhead)" />
-              <path d="M 1020 280 L 1060 280 L 1060 160 L 1060 160" stroke="#6B7280" strokeWidth="2" 
+              <path d="M 920 160 L 960 160 L 960 280" stroke="#6B7280" strokeWidth="2" 
+                    fill="none" markerEnd="url(#arrowhead)" />
+              <path d="M 1040 280 L 1080 280 L 1080 160" stroke="#6B7280" strokeWidth="2" 
                     fill="none" markerEnd="url(#arrowhead)" />
               
-              {/* 回到定义的循环箭头 */}
-              <path d="M 1100 130 Q 1150 100 1150 50 Q 1150 20 740 20 Q 700 20 700 130" 
+              {/* 回到模式选择的循环箭头 */}
+              <path d="M 1120 130 Q 1170 100 1170 50 Q 1170 20 740 20 Q 700 20 700 130" 
                     stroke="#10B981" strokeWidth="2" fill="none" markerEnd="url(#arrowhead)" 
                     strokeDasharray="5,5" />
+
+              {/* 标准化增强标识 */}
+              <circle cx="670" cy="205" r="12" fill="#FBBF24" />
+              <text x="670" y="210" textAnchor="middle" className="text-xs font-bold fill-white">✓</text>
+              <text x="630" y="235" className="text-xs fill-gray-600">EARS语法</text>
+              <text x="630" y="250" className="text-xs fill-gray-600">三文档结构</text>
             </g>
 
             {/* 协作指示器 */}
@@ -155,16 +182,19 @@ export default function WorkflowSwimlane({ className = '' }: WorkflowSwimlanePro
               <text x="290" y="405" className="text-xs fill-gray-600">分析协作</text>
               
               <circle cx="740" cy="400" r="8" fill="#10B981" />
-              <text x="760" y="405" className="text-xs fill-gray-600">任务协作</text>
+              <text x="760" y="405" className="text-xs fill-gray-600">模式协作</text>
               
-              <circle cx="980" cy="400" r="8" fill="#10B981" />
-              <text x="1000" y="405" className="text-xs fill-gray-600">编码协作</text>
+              <circle cx="880" cy="400" r="8" fill="#10B981" />
+              <text x="900" y="405" className="text-xs fill-gray-600">任务协作</text>
+              
+              <circle cx="1000" cy="400" r="8" fill="#10B981" />
+              <text x="1020" y="405" className="text-xs fill-gray-600">编码协作</text>
             </g>
 
             {/* 时间指示器 */}
             <g className="text-xs fill-gray-500">
               <text x="350" y="520" textAnchor="middle">1-2周</text>
-              <text x="925" y="520" textAnchor="middle">持续迭代</text>
+              <text x="950" y="520" textAnchor="middle">持续迭代</text>
             </g>
 
             {/* 活跃状态指示器 */}

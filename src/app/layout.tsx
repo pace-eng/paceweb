@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PACE 1.0 方法论 - 程序化AI协作工程",
-  description: "PACE 1.0 (Programmatic AI Collaboration Engineering) 是一套系统化的AI协作软件开发方法论，帮助团队高效进行人机协作开发。",
-  keywords: "PACE, AI协作, 软件开发, 方法论, 程序化AI协作工程",
+  title: "PACE 1.2 方法论 - 程序化AI协作工程",
+  description: "PACE 1.2 (Programmatic AI Collaboration Engineering) 是一套系统化的AI协作软件开发方法论，融合标准化实践，帮助团队高效进行人机协作开发。",
+  keywords: "PACE, AI协作, 软件开发, 方法论, 程序化AI协作工程, 标准化实践, EARS语法",
   icons: {
     icon: [
       { url: '/favicon.svg', type: 'image/svg+xml' },

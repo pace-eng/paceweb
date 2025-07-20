@@ -12,14 +12,14 @@ export default function ConceptsPage() {
             核心概念
           </h1>
           <p className="text-xl text-gray-600">
-            深入理解 PACE 1.0 的关键概念和原理
+            深入理解 PACE 1.2 的关键概念和原理
           </p>
         </div>
 
         <div className="prose prose-lg max-w-none">
           <h2>上下文工程（Context Engineering）</h2>
           <p>
-            上下文工程是PACE 1.0的核心技术，它是一门设计和构建动态系统的学科，能够在正确的时间，以正确的格式，为AI提供恰当的信息和工具。
+            上下文工程是PACE 1.2的核心技术，它是一门设计和构建动态系统的学科，能够在正确的时间，以正确的格式，为AI提供恰当的信息和工具。
           </p>
 
           {/* 上下文工程可视化 */}
@@ -29,7 +29,7 @@ export default function ConceptsPage() {
 
           <h2>垂直切片策略（Vertical Slicing）</h2>
           <p>
-            垂直切片是PACE 1.0的核心工作模式，它摒弃了传统的瀑布式开发阶段，转而采用迭代策略，专注于从第一天起就交付价值。
+            垂直切片是PACE 1.2的核心工作模式，它摒弃了传统的瀑布式开发阶段，转而采用迭代策略，专注于从第一天起就交付价值。
           </p>
 
           <h3>垂直切片的四个特征</h3>
@@ -126,6 +126,73 @@ export default function ConceptsPage() {
             </div>
           </div>
 
+          <h2>标准化实践融合 (v1.2新增)</h2>
+          <p>
+            PACE 1.2 融合了业界优秀的标准化实践，为团队提供开箱即用的体验，同时保持核心灵活性。
+          </p>
+
+          <h3>EARS语法集成</h3>
+          <p>
+            EARS (Easy Approach to Requirements Syntax) 语法通过结构化的自然语言模式，显著减少需求歧义，提升AI理解准确性。
+          </p>
+          
+          <div className="bg-blue-50 p-6 rounded-lg my-8 border-l-4 border-blue-500">
+            <h4 className="font-semibold text-blue-900 mb-3">EARS语法核心模式</h4>
+            <ul className="space-y-2 text-blue-700">
+              <li><strong>通用需求</strong>：系统应当...</li>
+              <li><strong>事件驱动需求</strong>：当...发生时，系统应当...</li>
+              <li><strong>状态驱动需求</strong>：当系统处于...状态时，应当...</li>
+              <li><strong>可选特性需求</strong>：如果...，则系统应当...</li>
+              <li><strong>复杂需求</strong>：如果...，当...时，系统应当...</li>
+            </ul>
+          </div>
+
+          <h3>三文档架构融合</h3>
+          <p>
+            通过观察Kiro等工具的成功实践，PACE 1.2支持三文档架构模式，与引用式任务卡完美融合。
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
+            <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+              <h4 className="font-semibold text-green-900">requirements.md</h4>
+              <p className="text-sm text-green-700 mt-2">使用EARS语法的结构化需求描述</p>
+            </div>
+            <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+              <h4 className="font-semibold text-purple-900">design.md</h4>
+              <p className="text-sm text-purple-700 mt-2">技术架构和设计决策文档</p>
+            </div>
+            <div className="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-500">
+              <h4 className="font-semibold text-orange-900">tasks.md</h4>
+              <p className="text-sm text-orange-700 mt-2">具体实现任务的分解</p>
+            </div>
+          </div>
+
+          <h3>双模式操作框架</h3>
+          <p>
+            PACE 1.2 支持超级个体模式和团队协作模式的灵活切换，满足不同场景需求。
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+            <div className="bg-indigo-50 p-6 rounded-lg border border-indigo-200">
+              <h4 className="font-semibold text-indigo-900 mb-3">超级个体模式</h4>
+              <ul className="text-sm text-indigo-700 space-y-1">
+                <li>• 个人项目、原型开发</li>
+                <li>• 灵活性优先，快速迭代</li>
+                <li>• 简化任务卡模板</li>
+                <li>• 个人偏好配置</li>
+              </ul>
+            </div>
+            <div className="bg-teal-50 p-6 rounded-lg border border-teal-200">
+              <h4 className="font-semibold text-teal-900 mb-3">团队协作模式</h4>
+              <ul className="text-sm text-teal-700 space-y-1">
+                <li>• 生产项目、长期维护</li>
+                <li>• 一致性优先，标准化流程</li>
+                <li>• 完整标准化模板</li>
+                <li>• 统一配置管理</li>
+              </ul>
+            </div>
+          </div>
+
           <h2>下一步学习</h2>
           <p>
             理解了核心概念后，建议继续学习：
@@ -133,7 +200,7 @@ export default function ConceptsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
             <Link href="/implementation" className="block p-4 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors border-l-4 border-blue-500">
               <h4 className="font-semibold text-blue-900">实施指南</h4>
-              <p className="text-sm text-blue-700 mt-1">了解如何在项目中实施PACE 1.0</p>
+              <p className="text-sm text-blue-700 mt-1">了解如何在项目中实施PACE 1.2</p>
             </Link>
             <Link href="/best-practices" className="block p-4 bg-green-50 hover:bg-green-100 rounded-lg transition-colors border-l-4 border-green-500">
               <h4 className="font-semibold text-green-900">最佳实践</h4>

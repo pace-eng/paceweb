@@ -24,14 +24,15 @@ export default function ImplementationPage() {
       id: 'phase1',
       title: '基础建设',
       duration: '1-2个月',
-      description: '建立团队AI协作能力，搭建基础工具链，制定标准流程',
+      description: '建立团队AI协作能力，搭建基础工具链，制定标准流程，配置标准化模板',
       icon: <SettingsIcon className="text-white" size={24} />,
       color: 'bg-emerald-500',
       activities: [
         '团队培训：AI工具使用和提示工程基础',
         'AI工具配置：Claude Code和Cursor深度集成',
+        '标准化配置：EARS语法和三文档架构设置',
         '双模式设置：个体和团队模式配置',
-        '任务卡模板：AI协作增强版模板制定',
+        '任务卡模板：标准化增强版模板制定',
         '试点项目：选择1-2个小型项目'
       ],
       outcomes: [
@@ -50,8 +51,10 @@ export default function ImplementationPage() {
       color: 'bg-blue-500',
       activities: [
         '进阶培训：注意力管理、目标聚焦机制',
+        '标准化实践：深化EARS语法和三文档架构应用',
         '错误学习：建立AI协作错误学习系统',
         '模式切换：练习个体与团队模式切换',
+        '工具链集成：建立统一的开发工具链',
         '规模扩展：应用到更多项目'
       ],
       outcomes: [
@@ -70,14 +73,16 @@ export default function ImplementationPage() {
       color: 'bg-purple-500',
       activities: [
         '组织级推广：制定推广计划',
-        '平台建设：支持PACE 1.0的统一平台',
+        '平台建设：支持PACE 1.2的统一平台',
         '知识管理：最佳实践库建设',
+        '模板生态：建设丰富的标准化模板库',
         '持续改进：反馈机制建立'
       ],
       outcomes: [
-        '80%以上项目采用PACE 1.1',
+        '80%以上项目采用PACE 1.2',
         '完善的知识管理体系',
         '灵活的双模式操作能力',
+        '标准化与灵活性的完美平衡',
         '整体效率提升50%以上'
       ]
     }
@@ -105,10 +110,10 @@ export default function ImplementationPage() {
       phase: "阶段 1: 切片循环",
       description: "四步迭代循环",
       steps: [
-        { title: "定义（DEFINE）", desc: "创建引用式任务卡，包含完整的上下文信息" },
-        { title: "评审（REVIEW）", desc: "团队评审任务卡，确保引用文档的正确性" },
-        { title: "实现（IMPLEMENT）", desc: "AI驱动编码，人类验证和反馈" },
-        { title: "验证（VERIFY）", desc: "最终代码评审、测试和集成" }
+        { title: "定义（DEFINE）", desc: "创建标准化任务卡，采用EARS语法和三文档架构" },
+        { title: "评审（REVIEW）", desc: "团队评审任务卡，确保引用文档和标准的正确性" },
+        { title: "实现（IMPLEMENT）", desc: "AI驱动编码，模式识别和质量检查" },
+        { title: "验证（VERIFY）", desc: "最终代码评审、测试和集成，遵循标准化流程" }
       ]
     }
   ];
@@ -116,9 +121,9 @@ export default function ImplementationPage() {
   return (
     <Layout>
       <HeroSection
-        subtitle="PACE 1.1 方法论"
+        subtitle="PACE 1.2 方法论"
         title="实施指南"
-        description="通过结构化的三阶段方法，在您的团队中成功实施PACE 1.1方法论，支持个体与团队双模式操作"
+        description="通过结构化的三阶段方法，在您的团队中成功实施PACE 1.2方法论，融合标准化实践，支持个体与团队双模式操作"
       >
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link 
@@ -224,12 +229,12 @@ export default function ImplementationPage() {
           </div>
         </div>
 
-        {/* PACE 1.1 工作流程 */}
+        {/* PACE 1.2 工作流程 */}
         <div className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">PACE 1.1 工作流程</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">PACE 1.2 工作流程</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              PACE 1.1 的核心工作流程分为两个主要阶段：蓝图规划和切片循环，增强了AI工具协作和注意力管理
+              PACE 1.2 的核心工作流程分为两个主要阶段：蓝图规划和切片循环，融合标准化实践，增强了AI工具协作和注意力管理
             </p>
           </div>
 
@@ -264,12 +269,116 @@ export default function ImplementationPage() {
           </div>
         </div>
 
+        {/* 标准化实施路径 (v1.2新增) */}
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">标准化实施路径</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              PACE 1.2 新增的标准化实施路径，提供开箱即用的体验，同时保持核心灵活性
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <Card className="border-purple-200">
+              <CardHeader>
+                <h3 className="text-xl font-semibold text-purple-800 flex items-center">
+                  <span className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white text-sm mr-3">📝</span>
+                  EARS语法集成
+                </h3>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="p-4 bg-purple-50 rounded-lg">
+                    <h4 className="font-semibold text-purple-900 mb-2">核心模式</h4>
+                    <div className="text-sm text-purple-700 space-y-1">
+                      <p>• 通用需求：系统应当...</p>
+                      <p>• 事件驱动：当...发生时</p>
+                      <p>• 状态驱动：当...状态时</p>
+                      <p>• 可选特性：如果...则...</p>
+                    </div>
+                  </div>
+                  <div className="p-4 bg-purple-50 rounded-lg">
+                    <h4 className="font-semibold text-purple-900 mb-2">实施步骤</h4>
+                    <div className="text-sm text-purple-700 space-y-1">
+                      <p>1. 配置EARS模板库</p>
+                      <p>2. 团队培训和练习</p>
+                      <p>3. 工具链集成</p>
+                      <p>4. 质量检查自动化</p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-green-200">
+              <CardHeader>
+                <h3 className="text-xl font-semibold text-green-800 flex items-center">
+                  <span className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white text-sm mr-3">📁</span>
+                  三文档架构
+                </h3>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="p-4 bg-green-50 rounded-lg">
+                    <h4 className="font-semibold text-green-900 mb-2">文档结构</h4>
+                    <div className="text-sm text-green-700 space-y-1">
+                      <p>• requirements.md (EARS)</p>
+                      <p>• design.md (技术设计)</p>
+                      <p>• tasks.md (实现任务)</p>
+                    </div>
+                  </div>
+                  <div className="p-4 bg-green-50 rounded-lg">
+                    <h4 className="font-semibold text-green-900 mb-2">融合策略</h4>
+                    <div className="text-sm text-green-700 space-y-1">
+                      <p>1. 现有项目渐进迁移</p>
+                      <p>2. 新项目直接采用</p>
+                      <p>3. 引用式任务卡集成</p>
+                      <p>4. 自动化生成工具</p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-orange-200">
+              <CardHeader>
+                <h3 className="text-xl font-semibold text-orange-800 flex items-center">
+                  <span className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white text-sm mr-3">🔧</span>
+                  工具链标准化
+                </h3>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="p-4 bg-orange-50 rounded-lg">
+                    <h4 className="font-semibold text-orange-900 mb-2">核心工具</h4>
+                    <div className="text-sm text-orange-700 space-y-1">
+                      <p>• pace-gen (模板生成器)</p>
+                      <p>• pace-pack (任务卡打包)</p>
+                      <p>• pace-lint (质量检查)</p>
+                      <p>• pace-sync (文档同步)</p>
+                    </div>
+                  </div>
+                  <div className="p-4 bg-orange-50 rounded-lg">
+                    <h4 className="font-semibold text-orange-900 mb-2">集成方式</h4>
+                    <div className="text-sm text-orange-700 space-y-1">
+                      <p>1. CLI工具安装配置</p>
+                      <p>2. 项目初始化设置</p>
+                      <p>3. CI/CD流程集成</p>
+                      <p>4. 团队协作配置</p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
         {/* 双模式配置指南 */}
         <div className="mb-16">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">双模式配置指南</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              PACE 1.1 支持个体和团队双模式操作，根据项目规模和需求灵活选择
+              PACE 1.2 支持个体和团队双模式操作，融合标准化实践，根据项目规模和需求灵活选择
             </p>
           </div>
 
@@ -288,13 +397,15 @@ export default function ImplementationPage() {
                     <div className="text-sm text-blue-700 space-y-1">
                       <p>• ~/.claude/CLAUDE.md (个人配置)</p>
                       <p>• 个人代码风格和偏好设置</p>
+                      <p>• 轻量EARS模板库</p>
                       <p>• 常用提示模板库</p>
                     </div>
                   </div>
                   <div className="p-4 bg-blue-50 rounded-lg">
                     <h4 className="font-semibold text-blue-900 mb-2">任务卡模板</h4>
                     <div className="text-sm text-blue-700 space-y-1">
-                      <p>• 简化版任务卡格式</p>
+                      <p>• 简化版标准化格式</p>
+                      <p>• 可选三文档架构</p>
                       <p>• 个人笔记区域</p>
                       <p>• 快速原型开发模式</p>
                     </div>
@@ -317,13 +428,15 @@ export default function ImplementationPage() {
                     <div className="text-sm text-green-700 space-y-1">
                       <p>• CLAUDE.md (团队项目配置)</p>
                       <p>• @.pace/team-standards.md</p>
+                      <p>• 完整EARS语法模板库</p>
                       <p>• 统一的架构约束和规范</p>
                     </div>
                   </div>
                   <div className="p-4 bg-green-50 rounded-lg">
                     <h4 className="font-semibold text-green-900 mb-2">协作流程</h4>
                     <div className="text-sm text-green-700 space-y-1">
-                      <p>• 完整版任务卡格式</p>
+                      <p>• 完整版标准化格式</p>
+                      <p>• 强制三文档架构</p>
                       <p>• 团队评审和质量要求</p>
                       <p>• 标准化验收清单</p>
                     </div>
@@ -339,7 +452,7 @@ export default function ImplementationPage() {
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">项目结构建议</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              为了支持PACE 1.1方法论的高效执行，建议采用以下项目结构
+              为了支持PACE 1.2方法论的高效执行，融合标准化实践，建议采用以下项目结构
             </p>
           </div>
 
@@ -347,7 +460,7 @@ export default function ImplementationPage() {
             <CardContent className="p-8">
               <div className="bg-gray-900 text-gray-100 p-6 rounded-lg font-mono text-sm overflow-x-auto">
                 <pre className="whitespace-pre">{`project-root/
-├── .pace/                          # PACE 1.1 配置目录
+├── .pace/                          # PACE 1.2 配置目录
 │   ├── memory/                    # 项目记忆库
 │   │   ├── decisions/            # 架构决策记录(ADR)
 │   │   ├── patterns/             # 代码模式和最佳实践
@@ -355,8 +468,18 @@ export default function ImplementationPage() {
 │   ├── current/                   # 当前状态
 │   │   ├── focus.md             # 当前焦点和目标
 │   │   └── progress.md          # 进度跟踪
-│   └── templates/                 # 任务卡模板
-├── docs/                          # 项目文档
+│   ├── templates/                 # 标准化任务卡模板
+│   │   ├── level-1.md           # Level 1 任务模板
+│   │   ├── level-2.md           # Level 2 任务模板
+│   │   ├── level-3.md           # Level 3 任务模板
+│   │   └── level-4.md           # Level 4 任务模板
+│   └── standards/                 # 标准化配置
+│       ├── ears-patterns.md      # EARS语法模式库
+│       └── three-doc-arch.md     # 三文档架构规范
+├── docs/                          # 项目文档 (三文档架构)
+│   ├── requirements.md           # 需求文档 (EARS语法)
+│   ├── design.md                 # 设计文档
+│   ├── tasks.md                  # 任务分解文档
 │   ├── architecture.md           # 架构设计文档
 │   ├── roadmap.md                # 产品路线图
 │   └── shared-kernel/            # 共享核心库文档
@@ -457,7 +580,7 @@ export default function ImplementationPage() {
 
         {/* 下一步行动 */}
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">准备开始实施PACE 1.1？</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">准备开始实施PACE 1.2？</h2>
           <p className="text-lg text-gray-600 mb-8">选择适合您的学习路径</p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">

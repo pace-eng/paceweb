@@ -12,10 +12,10 @@ export default function MethodologyPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            PACE 1.1 方法论概述
+            PACE 1.2 方法论概述
           </h1>
           <p className="text-xl text-gray-600">
-            程序化AI协作工程体系的完整介绍 · AI协作增强版
+            程序化AI协作工程体系的完整介绍 · 标准化融合版
           </p>
         </div>
 
@@ -32,7 +32,7 @@ export default function MethodologyPage() {
 
           <h2>核心理念</h2>
           <p>
-            PACE 1.0的核心洞察是：<strong>成功的AI协作不在于让AI完全替代人类，而在于找到最优的人机分工模式</strong>，让每一方都能发挥自己的独特优势。
+            PACE 1.2的核心洞察是：<strong>成功的AI协作不在于让AI完全替代人类，而在于找到最优的人机分工模式</strong>，让每一方都能发挥自己的独特优势。
           </p>
 
           <div className="bg-blue-50 p-6 rounded-lg my-8 border border-blue-200">
@@ -61,7 +61,7 @@ export default function MethodologyPage() {
 
           <h2>AI的本质局限性</h2>
           <p>
-            要理解PACE 1.0的必要性，我们必须深入理解大型语言模型（LLM）的本质。LLM并非像人类一样理解代码逻辑，它的核心是一个基于概率的高度复杂的序列预测引擎。
+            要理解PACE 1.2的必要性，我们必须深入理解大型语言模型（LLM）的本质。LLM并非像人类一样理解代码逻辑，它的核心是一个基于概率的高度复杂的序列预测引擎。
           </p>
 
           <h3>三大根本性冲突</h3>
@@ -88,7 +88,7 @@ export default function MethodologyPage() {
 
           <h2>解决方案：上下文工程</h2>
           <p>
-            PACE 1.0通过引入&ldquo;上下文工程&rdquo;来解决这些问题——一门设计和构建动态系统的学科，能够在正确的时间，以正确的格式，为AI提供恰当的信息和工具。
+            PACE 1.2通过引入&ldquo;上下文工程&rdquo;来解决这些问题——一门设计和构建动态系统的学科，能够在正确的时间，以正确的格式，为AI提供恰当的信息和工具。
           </p>
 
           <h3>上下文工程的核心要素</h3>
@@ -115,7 +115,7 @@ export default function MethodologyPage() {
 
           <h2>垂直切片策略</h2>
           <p>
-            垂直切片是PACE 1.0的核心工作模式，它强调功能完整性、端到端覆盖、价值导向和风险分散。
+            垂直切片是PACE 1.2的核心工作模式，它强调功能完整性、端到端覆盖、价值导向和风险分散。
           </p>
 
           <div className="bg-yellow-50 p-6 rounded-lg my-8 border border-yellow-200">
@@ -144,7 +144,7 @@ export default function MethodologyPage() {
 
           <h2>任务复杂度分级</h2>
           <p>
-            基于任务的复杂度和AI的适用性，PACE 1.0建立了四级分类体系：
+            基于任务的复杂度和AI的适用性，PACE 1.2建立了四级分类体系：
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
@@ -183,9 +183,9 @@ export default function MethodologyPage() {
             <WorkflowSwimlane />
           </div>
 
-          <h2>AI协作工具深度集成 (v1.1新增)</h2>
+          <h2>AI协作工具深度集成 (v1.2增强)</h2>
           <p>
-            PACE 1.1 版本针对现代AI编程工具进行了深度优化，特别是对Claude Code和Cursor等主流工具的协作策略进行了系统化设计。
+            PACE 1.2 版本针对现代AI编程工具进行了深度优化，特别是对Claude Code和Cursor等主流工具的协作策略进行了系统化设计。
           </p>
 
           <div className="bg-blue-50 p-6 rounded-lg my-8 border border-blue-200">
@@ -209,7 +209,7 @@ export default function MethodologyPage() {
 
           <h2>任务卡AI适配增强</h2>
           <p>
-            传统任务卡主要面向人类理解，而AI协作需要更结构化、更精确的信息传递。PACE 1.1 引入了专门的AI协作指导部分。
+            传统任务卡主要面向人类理解，而AI协作需要更结构化、更精确的信息传递。PACE 1.2 引入了专门的AI协作指导部分。
           </p>
 
           {/* 任务卡演进可视化 */}
@@ -219,7 +219,7 @@ export default function MethodologyPage() {
 
           <h2>注意力管理与目标聚焦</h2>
           <p>
-            长任务执行中最大的风险是目标偏移。PACE 1.1 建立了系统性的注意力管理机制，确保AI协作始终聚焦核心目标。
+            长任务执行中最大的风险是目标偏移。PACE 1.2 建立了系统性的注意力管理机制，确保AI协作始终聚焦核心目标。
           </p>
 
           {/* 注意力管理可视化 */}
@@ -227,9 +227,36 @@ export default function MethodologyPage() {
             <AttentionManagement />
           </div>
 
+          <h2>标准化实践融合 (v1.2重大更新)</h2>
+          <p>
+            PACE 1.2 版本通过深入观察业界实践，特别是AWS Kiro等AI开发工具的成功经验，战略性地融合了标准化实践的精华，同时保持了PACE的核心优势。
+          </p>
+
+          <div className="bg-green-50 p-6 rounded-lg my-8 border border-green-200">
+            <h3 className="text-lg font-semibold text-green-900 mb-3">标准化融合的核心价值</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-white p-4 rounded-lg border border-green-300">
+                <h4 className="font-semibold text-green-800">EARS语法集成</h4>
+                <p className="text-sm text-green-700 mt-2">结构化需求表达，减少歧义，提升AI理解准确性</p>
+              </div>
+              <div className="bg-white p-4 rounded-lg border border-green-300">
+                <h4 className="font-semibold text-green-800">三文档架构融合</h4>
+                <p className="text-sm text-green-700 mt-2">requirements.md、design.md、tasks.md结构与PACE引用式任务卡完美融合</p>
+              </div>
+              <div className="bg-white p-4 rounded-lg border border-green-300">
+                <h4 className="font-semibold text-green-800">分级标准化模板</h4>
+                <p className="text-sm text-green-700 mt-2">Level 1-4任务的标准化模板体系，开箱即用</p>
+              </div>
+              <div className="bg-white p-4 rounded-lg border border-green-300">
+                <h4 className="font-semibold text-green-800">配套工具链</h4>
+                <p className="text-sm text-green-700 mt-2">pace-gen、pace-pack、pace-lint等工具支持</p>
+              </div>
+            </div>
+          </div>
+
           <h2>个体与团队双模式支持</h2>
           <p>
-            PACE 1.1 支持从&ldquo;超级个体&rdquo;到&ldquo;团队协作&rdquo;的无缝切换，平衡个体效率和团队一致性。
+            PACE 1.2 支持从&ldquo;超级个体&rdquo;到&ldquo;团队协作&rdquo;的无缝切换，平衡个体效率和团队一致性。
           </p>
 
           {/* 双模式框架可视化 */}

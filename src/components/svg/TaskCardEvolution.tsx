@@ -6,11 +6,11 @@ const TaskCardEvolution: React.FC = () => {
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">任务卡AI协作适配演进</h2>
         <p className="text-lg text-gray-600">
-          从传统任务卡到AI协作增强版本的演进过程
+          从传统任务卡到PACE 1.2标准化融合版本的演进过程
         </p>
       </div>
       
-      <svg viewBox="0 0 1200 900" className="w-full h-auto">
+      <svg viewBox="0 0 1200 950" className="w-full h-auto">
         <defs>
           {/* 渐变定义 */}
           <linearGradient id="traditionalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -72,18 +72,18 @@ const TaskCardEvolution: React.FC = () => {
 
         {/* 演进箭头 */}
         <path d="M 450 400 L 550 400" stroke="url(#evolutionGradient)" strokeWidth="6" markerEnd="url(#arrowEvolution)" />
-        <text x="500" y="390" textAnchor="middle" className="text-sm font-bold" fill="#F59E0B">AI协作增强</text>
-        <text x="500" y="420" textAnchor="middle" className="text-sm font-bold" fill="#F59E0B">1.1 升级</text>
+        <text x="500" y="390" textAnchor="middle" className="text-sm font-bold" fill="#F59E0B">标准化融合</text>
+        <text x="500" y="420" textAnchor="middle" className="text-sm font-bold" fill="#F59E0B">1.2 升级</text>
 
         {/* AI协作增强版任务卡 - 右侧 */}
         <g>
-          <rect x="570" y="100" width="550" height="650" rx="15" fill="url(#enhancedGradient)" stroke="#10B981" strokeWidth="3" />
+          <rect x="570" y="100" width="550" height="730" rx="15" fill="url(#enhancedGradient)" stroke="#10B981" strokeWidth="3" />
           <text x="845" y="130" textAnchor="middle" className="text-lg font-bold" fill="#047857">
-            AI协作增强版任务卡 1.1
+            标准化融合版任务卡 1.2
           </text>
           
           {/* 增强内容结构 */}
-          <rect x="590" y="150" width="510" height="580" rx="8" fill="white" stroke="#10B981" strokeWidth="1" />
+          <rect x="590" y="150" width="510" height="660" rx="8" fill="white" stroke="#10B981" strokeWidth="1" />
           
           {/* 原有基础信息 (保留) */}
           <rect x="610" y="170" width="470" height="50" rx="5" fill="#F0F9FF" stroke="#3B82F6" strokeWidth="1" />
@@ -113,53 +113,68 @@ const TaskCardEvolution: React.FC = () => {
           <text x="620" y="525" className="text-xs" fill="#1E40AF">• 注意力检查点: [防偏离验证点]</text>
           
           {/* 新增: 避免偏移提醒 */}
-          <rect x="610" y="560" width="470" height="100" rx="5" fill="#FDF2F8" stroke="#EC4899" strokeWidth="1" />
-          <text x="620" y="580" className="text-sm font-bold" fill="#BE185D">🚫 避免偏移提醒 (新增)</text>
+          <rect x="610" y="560" width="470" height="80" rx="5" fill="#FDF2F8" stroke="#EC4899" strokeWidth="1" />
+          <text x="620" y="580" className="text-sm font-bold" fill="#BE185D">🚫 避免偏移提醒</text>
           <text x="620" y="600" className="text-xs" fill="#BE185D">• 不要做的事情: [明确列出容易偏离的行为]</text>
           <text x="620" y="615" className="text-xs" fill="#BE185D">• 保持专注于: [需要始终关注的核心要素]</text>
-          <text x="620" y="630" className="text-xs" fill="#BE185D">• 遇到XX情况时: [常见偏离情况的应对策略]</text>
-          <text x="620" y="645" className="text-xs" fill="#BE185D">• 时间盒限制: [防止过度优化的时间约束]</text>
+          <text x="620" y="630" className="text-xs" fill="#BE185D">• 时间盒限制: [防止过度优化的时间约束]</text>
+
+          {/* 新增: EARS语法支持 (1.2版本新增) */}
+          <rect x="610" y="660" width="470" height="60" rx="5" fill="#F0F9FF" stroke="#0EA5E9" strokeWidth="1" />
+          <text x="620" y="680" className="text-sm font-bold" fill="#0369A1">📝 EARS语法支持 (1.2新增)</text>
+          <text x="620" y="700" className="text-xs" fill="#0369A1">• 结构化需求表达: 当...时，系统应当...</text>
+          <text x="620" y="715" className="text-xs" fill="#0369A1">• 减少歧义，提升AI理解准确性</text>
         </g>
 
         {/* 核心改进亮点 */}
         <g>
-          <ellipse cx="300" cy="750" rx="120" ry="60" fill="#ECFDF5" stroke="#10B981" strokeWidth="2" />
-          <text x="300" y="740" textAnchor="middle" className="text-sm font-bold" fill="#047857">
-            核心改进
+          <ellipse cx="200" cy="820" rx="120" ry="60" fill="#ECFDF5" stroke="#10B981" strokeWidth="2" />
+          <text x="200" y="810" textAnchor="middle" className="text-sm font-bold" fill="#047857">
+            AI协作增强
           </text>
-          <text x="300" y="760" textAnchor="middle" className="text-xs" fill="#047857">
-            AI适配 + 注意力管理
-          </text>
-        </g>
-
-        <g>
-          <ellipse cx="600" cy="750" rx="120" ry="60" fill="#FEF3C7" stroke="#F59E0B" strokeWidth="2" />
-          <text x="600" y="740" textAnchor="middle" className="text-sm font-bold" fill="#D97706">
-            提示工程
-          </text>
-          <text x="600" y="760" textAnchor="middle" className="text-xs" fill="#D97706">
-            结构化 + 上下文优化
+          <text x="200" y="830" textAnchor="middle" className="text-xs" fill="#047857">
+            工具适配 + 注意力管理
           </text>
         </g>
 
         <g>
-          <ellipse cx="900" cy="750" rx="120" ry="60" fill="#DBEAFE" stroke="#3B82F6" strokeWidth="2" />
-          <text x="900" y="740" textAnchor="middle" className="text-sm font-bold" fill="#1E40AF">
-            目标聚焦
+          <ellipse cx="450" cy="820" rx="120" ry="60" fill="#F0F9FF" stroke="#0EA5E9" strokeWidth="2" />
+          <text x="450" y="810" textAnchor="middle" className="text-sm font-bold" fill="#0369A1">
+            EARS语法
           </text>
-          <text x="900" y="760" textAnchor="middle" className="text-xs" fill="#1E40AF">
-            动态跟踪 + 偏移预防
+          <text x="450" y="830" textAnchor="middle" className="text-xs" fill="#0369A1">
+            结构化需求 + 减少歧义
+          </text>
+        </g>
+
+        <g>
+          <ellipse cx="700" cy="820" rx="120" ry="60" fill="#FEF3C7" stroke="#F59E0B" strokeWidth="2" />
+          <text x="700" y="810" textAnchor="middle" className="text-sm font-bold" fill="#D97706">
+            标准化模板
+          </text>
+          <text x="700" y="830" textAnchor="middle" className="text-xs" fill="#D97706">
+            开箱即用 + 分级支持
+          </text>
+        </g>
+
+        <g>
+          <ellipse cx="950" cy="820" rx="120" ry="60" fill="#DBEAFE" stroke="#3B82F6" strokeWidth="2" />
+          <text x="950" y="810" textAnchor="middle" className="text-sm font-bold" fill="#1E40AF">
+            双模式
+          </text>
+          <text x="950" y="830" textAnchor="middle" className="text-xs" fill="#1E40AF">
+            个体 + 团队协作
           </text>
         </g>
 
         {/* 顶部标题 */}
         <text x="600" y="50" textAnchor="middle" className="text-xl font-bold" fill="#1F2937">
-          PACE 1.1 任务卡AI协作适配演进
+          PACE 1.2 任务卡标准化融合演进
         </text>
         
         {/* 底部说明 */}
-        <text x="600" y="870" textAnchor="middle" className="text-sm" fill="#6B7280">
-          从传统人工任务卡升级为AI协作增强版本，显著提升人机协作效率和质量
+        <text x="600" y="920" textAnchor="middle" className="text-sm" fill="#6B7280">
+          从传统人工任务卡升级为标准化融合版本，集成EARS语法和模板体系，显著提升协作效率
         </text>
       </svg>
     </div>

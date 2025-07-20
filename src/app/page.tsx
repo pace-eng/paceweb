@@ -11,13 +11,13 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              PACE 1.1 方法论
+              PACE 1.2 方法论
             </h1>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              程序化AI协作工程体系 · AI协作增强版
+              程序化AI协作工程体系 · 标准化融合版
             </p>
             <p className="text-lg md:text-xl mb-12 max-w-3xl mx-auto opacity-80">
-              重新定义软件开发的协作模式，深度集成Claude Code、Cursor等现代AI工具，让人机协作更加高效、可持续
+              重新定义软件开发的协作模式，融合业界标准化实践精华，深度集成Claude Code、Cursor等现代AI工具，让人机协作更加高效、可持续
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -45,11 +45,11 @@ export default function Home() {
               核心特性
             </h2>
             <p className="text-xl text-gray-600">
-              PACE 1.1 通过五个核心特性重新定义AI协作开发
+              PACE 1.2 通过七个核心特性重新定义AI协作开发
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             <div className="bg-blue-50 p-6 rounded-lg shadow-md border-l-4 border-blue-500">
               <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -109,6 +109,30 @@ export default function Home() {
                 深度集成Claude Code、Cursor等现代AI工具，实现最优人机分工
               </p>
             </div>
+
+            <div className="bg-cyan-50 p-6 rounded-lg shadow-md border-l-4 border-cyan-500">
+              <div className="w-12 h-12 bg-cyan-600 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold mb-2 text-cyan-900">标准化融合</h3>
+              <p className="text-cyan-700">
+                融合EARS语法和三文档架构，提供开箱即用的标准化模板体系
+              </p>
+            </div>
+
+            <div className="bg-teal-50 p-6 rounded-lg shadow-md border-l-4 border-teal-500">
+              <div className="w-12 h-12 bg-teal-600 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold mb-2 text-teal-900">双模式支持</h3>
+              <p className="text-teal-700">
+                支持超级个体和团队协作双模式，平衡灵活性与一致性
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -135,14 +159,14 @@ export default function Home() {
               方法论概述
             </h2>
             <p className="text-xl text-gray-600">
-              PACE 1.0 通过系统化的流程和工具，解决AI协作开发中的核心挑战
+              PACE 1.2 通过系统化的流程和工具，解决AI协作开发中的核心挑战
             </p>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="bg-red-50 p-8 rounded-lg border-l-4 border-red-500">
               <h3 className="text-2xl font-bold text-red-900 mb-6">
-                为什么需要 PACE 1.0？
+                为什么需要 PACE 1.2？
               </h3>
               <ul className="space-y-4 text-red-700">
                 <li className="flex items-start">
@@ -162,7 +186,7 @@ export default function Home() {
             
             <div className="bg-green-50 p-8 rounded-lg border-l-4 border-green-500">
               <h3 className="text-xl font-bold text-green-900 mb-4">
-                PACE 1.0 解决方案
+                PACE 1.2 解决方案
               </h3>
               <div className="space-y-4">
                 <div className="flex items-center">
@@ -191,7 +215,7 @@ export default function Home() {
       <section className="py-20 bg-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            开始使用 PACE 1.0
+            开始使用 PACE 1.2
           </h2>
           <p className="text-xl mb-8 opacity-90">
             加入我们，一起重新定义软件开发的协作模式
